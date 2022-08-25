@@ -1,6 +1,6 @@
-package modelo.dao;
+package com.modelo.dao;
 
-import modelo.jdbcdao.JDBCDAOFactory;
+//import modelo.jdbcdao.JDBCDAOFactory;
 import modelo.jpadao.JPADAOFactory;
 
 public abstract class DAOFactory {
@@ -11,7 +11,7 @@ public abstract class DAOFactory {
 		return instancia;
 	}
 	
-	public abstract PersonaDAO getPersonaDAO();
-	public abstract DepartamentoDAO getDepartamentoDAO();
+	public abstract DuenioDAO getDuenioDAO();
+	public abstract MascotaDAO getMascotaDAO();
 
 }
