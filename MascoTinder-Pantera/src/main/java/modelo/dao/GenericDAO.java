@@ -1,5 +1,6 @@
 package modelo.dao;
 
+import entidades.Duenio;
 
 public interface GenericDAO <T, ID>{
 	public void create(T instancia);
