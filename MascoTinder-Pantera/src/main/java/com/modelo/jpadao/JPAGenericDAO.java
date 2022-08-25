@@ -1,4 +1,4 @@
-package modelo.jpadao;
+package com.modelo.jpadao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;

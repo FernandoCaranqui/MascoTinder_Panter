@@ -1,4 +1,4 @@
-package modelo.dao;
+package com.modelo.dao;
 
 //import modelo.jdbcdao.JDBCDAOFactory;
 import modelo.jpadao.JPADAOFactory;

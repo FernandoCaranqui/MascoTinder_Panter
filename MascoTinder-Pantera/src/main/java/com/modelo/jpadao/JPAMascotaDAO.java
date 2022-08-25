@@ -1,4 +1,4 @@
-package modelo.jpadao;
+package com.modelo.jpadao;
 
 import java.util.List;
 

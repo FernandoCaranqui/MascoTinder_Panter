@@ -1,4 +1,4 @@
-package modelo.jpadao;
+package com.modelo.jpadao;
 
 import modelo.dao.DAOFactory;
 import modelo.dao.DuenioDAO;
