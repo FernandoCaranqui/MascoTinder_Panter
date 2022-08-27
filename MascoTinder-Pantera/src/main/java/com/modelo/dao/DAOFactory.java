@@ -1,7 +1,7 @@
 package com.modelo.dao;
 
 //import modelo.jdbcdao.JDBCDAOFactory;
-import modelo.jpadao.JPADAOFactory;
+import com.modelo.jpadao.JPADAOFactory;
 
 public abstract class DAOFactory {
 	//protected static DAOFactory instancia = new JDBCDAOFactory();
