@@ -18,8 +18,8 @@ public class Foto implements Serializable {
 	private Integer id;
 	@Column(name = "urlFoto")
 	private String urlFoto;
-	//@OneToMany(mappedBy = "foto")
-	//private List fotos;
+	@OneToMany(mappedBy = "foto")
+	private List fotos;
 	
 	
 	
