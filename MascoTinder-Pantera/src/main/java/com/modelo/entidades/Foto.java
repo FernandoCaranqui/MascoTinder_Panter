@@ -10,7 +10,7 @@ import org.eclipse.persistence.internal.oxm.schema.model.List;
  *
  */
 @Entity
-@Table(name = "Foto")
+@Table(name = "foto")
 public class Foto implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,7 +18,6 @@ public class Foto implements Serializable {
 	private Integer id;
 	@Column(name = "urlFoto")
 	private String urlFoto;
-	@OneToMany(mappedBy = "foto")
 	private List fotos;
 	
 	
