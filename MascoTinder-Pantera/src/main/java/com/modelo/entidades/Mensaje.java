@@ -3,23 +3,27 @@ package com.modelo.entidades;
 import java.io.Serializable;
 import javax.persistence.*;
 
-/**
- * Entity implementation class for Entity: Match
- *
- */
 @Entity
-@Table(name = "match")
-public class Match implements Serializable {
+@Table(name = "mensaje")
+public class Mensaje implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private Integer id;
-	@Column(name = "idMascotaPretendido")
-	private Mascota pretendido;
-	@Column(name = "idMascotaPretendiente")
-	private Mascota pretendiente;
+	@Column (name = "idReceptor")
+	private Duenio Receptor;
+	@Column (name = "idEmisor")
+	private Duenio emisor;
+	@Column (name = "contenido")
+	private Duenio contenido;
 	
 	
+	private static final long serialVersionUID = 1L;
+
+	public Mensaje() {
+		super();
+	}
+
 	public Integer getId() {
 		return id;
 	}
@@ -28,26 +32,28 @@ public class Match implements Serializable {
 		this.id = id;
 	}
 
-	public Mascota getPretendido() {
-		return pretendido;
+	public Duenio getReceptor() {
+		return Receptor;
 	}
 
-	public void setPretendido(Mascota pretendido) {
-		this.pretendido = pretendido;
+	public void setReceptor(Duenio receptor) {
+		Receptor = receptor;
 	}
 
-	public Mascota getPretendiente() {
-		return pretendiente;
+	public Duenio getEmisor() {
+		return emisor;
 	}
 
-	public void setPretendiente(Mascota pretendiente) {
-		this.pretendiente = pretendiente;
+	public void setEmisor(Duenio emisor) {
+		this.emisor = emisor;
 	}
 
-	private static final long serialVersionUID = 1L;
+	public Duenio getContenido() {
+		return contenido;
+	}
 
-	public Match() {
-		super();
+	public void setContenido(Duenio contenido) {
+		this.contenido = contenido;
 	}
 	
 	@Override
@@ -59,14 +65,15 @@ public class Match implements Serializable {
 	@Override
 	public boolean equals(Object object) {
 		// TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Match)) {
+        if (!(object instanceof Mensaje)) {
             return false;
         }
-        Match other = (Match) object;
+        Mensaje other = (Mensaje) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
         return true;
 	}
+	
    
 }

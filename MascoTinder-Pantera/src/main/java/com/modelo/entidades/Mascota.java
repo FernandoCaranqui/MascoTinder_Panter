@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Mascota")
+@Table(name = "mascota")
 public class Mascota  implements Serializable{
 
 	/**
@@ -20,7 +20,7 @@ public class Mascota  implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "mascot_cod")
+	@Column(name = "id")
 	private Integer id;
 	@Column(name = "mascot_nombre")
 	private String nombre;
@@ -30,6 +30,10 @@ public class Mascota  implements Serializable{
 	private String raza;
 	@Column(name = "mascot_edad")
 	private int edad;
+	@Column(name = "sexo")
+	private String sexo;
+	@Column(name = "ubicacion")
+	private String ubicacion;
 
 	public Mascota() {
 

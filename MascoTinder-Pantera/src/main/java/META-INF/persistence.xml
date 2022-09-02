@@ -5,6 +5,9 @@
 	<class>com.modelo.entidades.Duenio</class>
 	<class>com.modelo.entidades.Mascota</class>
 	<class>com.modelo.entidades.Foto</class>
+	<class>com.modelo.entidades.Match</class>
+	<class>com.modelo.entidades.Mensaje</class>
+	<class>com.modelo.entidades.Preferencia</class>
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/mascotinder"/>
 			<property name="javax.persistence.jdbc.user" value="root"/>

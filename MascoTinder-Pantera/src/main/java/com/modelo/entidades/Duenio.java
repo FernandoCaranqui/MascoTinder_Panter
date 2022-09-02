@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "Duenio")
+@Table(name = "duenio")
 public class Duenio implements Serializable{
 
 	/**
@@ -23,7 +23,7 @@ public class Duenio implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "duenio_codigo")
+	@Column(name = "id")
 	private Integer id;
 	@Column(name = "duenio_nombre")
 	private String nombre;
@@ -94,3 +94,4 @@ public class Duenio implements Serializable{
 	}
 	
 }
+
