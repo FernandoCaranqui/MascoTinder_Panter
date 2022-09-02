@@ -3,28 +3,23 @@ package com.modelo.entidades;
 import java.io.Serializable;
 import javax.persistence.*;
 
-import org.eclipse.persistence.internal.oxm.schema.model.List;
-
-/**
- * Entity implementation class for Entity: Foto
- *
- */
 @Entity
-@Table(name = "foto")
-public class Foto implements Serializable {
+@Table(name = "preferencia")
+public class Preferencia implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "foto_ID")
+	@Column(name = "id_Preferencia")
 	private Integer id;
-	@Column(name = "urlFoto")
-	private String urlFoto;
-	private List fotos;
-	
-	
+	@Column(name = "sexo")
+	private String sexo;
+	@Column(name = "especie")
+	private String especie;
+	@Column(name = "ubicacion")
+	private String ubicacion;
 	
 	private static final long serialVersionUID = 1L;
 
-	public Foto() {
+	public Preferencia() {
 		super();
 	}
 
@@ -36,21 +31,30 @@ public class Foto implements Serializable {
 		this.id = id;
 	}
 
-	public String getUrlFoto() {
-		return urlFoto;
+	public String getSexo() {
+		return sexo;
 	}
 
-	public void setUrlFoto(String urlFoto) {
-		this.urlFoto = urlFoto;
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
 	}
 
-	public List getFotos() {
-		return fotos;
+	public String getEspecie() {
+		return especie;
 	}
 
-	public void setFotos(List fotos) {
-		this.fotos = fotos;
+	public void setEspecie(String especie) {
+		this.especie = especie;
 	}
+
+	public String getUbicacion() {
+		return ubicacion;
+	}
+
+	public void setUbicacion(String ubicacion) {
+		this.ubicacion = ubicacion;
+	}
+	
 	
 	@Override
 	public int hashCode() {
@@ -61,10 +65,10 @@ public class Foto implements Serializable {
 	@Override
 	public boolean equals(Object object) {
 		// TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Foto)) {
+        if (!(object instanceof Preferencia)) {
             return false;
         }
-        Foto other = (Foto) object;
+        Preferencia other = (Preferencia) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
