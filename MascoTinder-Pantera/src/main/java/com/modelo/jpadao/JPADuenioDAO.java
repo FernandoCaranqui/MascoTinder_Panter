@@ -21,10 +21,10 @@ public class JPADuenioDAO extends JPAGenericDAO<Duenio, Integer> implements Duen
 	public Duenio autorizarDuenio(String nombre, String clave) {
 
 		Duenio duenioAutorizado = null;
-		String sentenceJPQL = "SELECT d from Duenio d WHERE d.user= :duenio_user AND d.password= :duenio_password";
+		String sentenceJPQL = "SELECT d from Duenio d WHERE d.nombre= :param_nombre AND d.password= :param_clave";
 		Query query = this.em.createQuery(sentenceJPQL);
-		query.setParameter("duenio_user", nombre);
-		query.setParameter("duenio_password", clave);
+		query.setParameter("param_nombre", nombre);
+		query.setParameter("param_clave", clave);
 		try {
 			duenioAutorizado = (Duenio) query.getSingleResult();
 			

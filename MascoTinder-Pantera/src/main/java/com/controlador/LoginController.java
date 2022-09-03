@@ -51,6 +51,7 @@ public class LoginController extends HttpServlet {
 				// Creamos la sesión
 				HttpSession misession = request.getSession(true);
 				misession.setAttribute("usuario", duenioAutenticado);
+				System.out.println("ESTAS DENTRO");
 				request.getRequestDispatcher("ListarMascotasController").forward(request, response);
 			} else {
 				System.out.println("al login");

@@ -3,6 +3,7 @@ package com.modelo.jpadao;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 import com.modelo.dao.MascotaDAO;
@@ -19,13 +20,20 @@ public class JPAMascotaDAO extends JPAGenericDAO<Mascota, Integer> implements Ma
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Mascota> getMascotas() {
 		List<Mascota> lista = new ArrayList<Mascota>();
-		String sentenceJPQL = "SELECT d FROM duenio d";
-		TypedQuery <Mascota> query = this.em.createQuery(sentenceJPQL, Mascota.class);
-		lista = query.getResultList();
+		String sentenceJPQL = "SELECT d FROM Mascota d";
+		//TypedQuery <Mascota> query = this.em.createQuery(sentenceJPQL, Mascota.class);
+		//lista = query.getResultList();
+		Query query = this.em.createQuery(sentenceJPQL);
+		try {
+			lista = query.getResultList();
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 		return lista;
 	}
 
