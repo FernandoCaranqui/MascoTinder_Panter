@@ -9,35 +9,28 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.modelo.entidades.Mascota;
 
-import modelo.Persona;
-
-/**
- * Servlet implementation class EliminarMascotaController
- */
 @WebServlet("/EliminarMascotaController")
 public class EliminarMascotaController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	public EliminarMascotaController() {
+		super();
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// 1. Obtener parámetros
-		int mascotaId = Integer.parseInt(request.getParameter("idMascota"));
+		int di = Integer.parseInt(request.getParameter("idMascota"));
 		// 2.- Llamar al Modelo
 		Mascota mascotaModelo = new Mascota();
-		mascotaModelo.delete(mascotaId);
+		mascotaModelo.delete(id);
 
 		// 3.- Llamar a la Vista
-		request.getRequestDispatcher("ListarPersonasController").forward(request, response);
-	}
-
+		request.getRequestDispatcher("ListarMascotasController").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		doGet(request, response);
 	}
 
 }

@@ -1,5 +1,7 @@
 package com.modelo.jpadao;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 
@@ -55,6 +57,21 @@ public class JPAGenericDAO<T,ID> implements GenericDAO<T, ID> {
 	@Override
 	public T getById(ID id) {
 		return em.find(this.persistenceClass, id);
+	}
+	@Override
+	public List<T> get() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<T> get(String[] attributes, String[] values) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<T> get(String[] attributes, String[] values, String order, int index, int size) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

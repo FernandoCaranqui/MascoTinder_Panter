@@ -29,7 +29,7 @@ public class Mascota  implements Serializable{
 	@Column(name="mascot_nombre")
 	private String nombre;
 	
-	@Column(name="mascot_especia")
+	@Column(name="mascot_especie")
 	private String especie;
 	
 	@Column(name="mascot_raza")

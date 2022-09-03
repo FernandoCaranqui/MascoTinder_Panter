@@ -26,6 +26,7 @@ public class JPAMascotaDAO extends JPAGenericDAO<Mascota, Integer> implements Ma
 		String sentenceJPQL = "SELECT d FROM duenio d";
 		TypedQuery <Mascota> query = this.em.createQuery(sentenceJPQL, Mascota.class);
 		lista = query.getResultList();
+		return lista;
 	}
 
 }
