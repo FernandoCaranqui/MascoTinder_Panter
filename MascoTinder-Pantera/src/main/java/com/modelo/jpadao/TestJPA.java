@@ -7,17 +7,13 @@ import com.modelo.entidades.Mascota;
 public class TestJPA {
 
 	public static void main(String[] args) {
-			Mascota m = new Mascota();
-			m.setId(1);
-			m.setNombre("Cristopher");
-			m.setEdad(5);
-			m.setEspecie("canguro");
-			m.setRaza("negra");
+			Duenio r = new Duenio();
+			r.setNombre("Kevin");
+			r.setPassword("123456");
+			r.setUser("kevin123");
+			r.setMascotas(null);
 			
-			/*m.setUser("crisPerez");
-			m.setPasseword("cris123");*/
-			
-			//DAOFactory.getFactory().getDuenioDAO().create(m);
+			DAOFactory.getFactory().getDuenioDAO().create(r);
 	}
 
 }

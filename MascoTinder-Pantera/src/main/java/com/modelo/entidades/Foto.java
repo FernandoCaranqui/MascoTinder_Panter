@@ -16,9 +16,14 @@ public class Foto implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "foto_ID")
 	private Integer id;
+	
 	@Column(name = "urlFoto")
 	private String urlFoto;
-	private List fotos;
+	
+	@ManyToOne
+	@JoinColumn(name = "idMascota")
+	private Mascota fotosMasc;
+	//private List ;
 	
 	
 	
@@ -43,15 +48,17 @@ public class Foto implements Serializable {
 	public void setUrlFoto(String urlFoto) {
 		this.urlFoto = urlFoto;
 	}
-
-	public List getFotos() {
-		return fotos;
-	}
-
-	public void setFotos(List fotos) {
-		this.fotos = fotos;
-	}
 	
+
+	
+	public Mascota getFotosMasc() {
+		return fotosMasc;
+	}
+
+	public void setFotosMasc(Mascota fotosMasc) {
+		this.fotosMasc = fotosMasc;
+	}
+
 	@Override
 	public int hashCode() {
 		int hash = 0;

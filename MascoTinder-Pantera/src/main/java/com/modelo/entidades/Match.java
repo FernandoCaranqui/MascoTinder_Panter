@@ -14,9 +14,13 @@ public class Match implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private Integer id;
-	@Column(name = "idMascotaPretendido")
+	
+	@OneToOne
+	@JoinColumn(name = "idMascotaPretendido")
 	private Mascota pretendido;
-	@Column(name = "idMascotaPretendiente")
+	
+	@ManyToOne
+	@JoinColumn(name = "idMascotaPretendiente")
 	private Mascota pretendiente;
 	
 	
@@ -43,6 +47,8 @@ public class Match implements Serializable {
 	public void setPretendiente(Mascota pretendiente) {
 		this.pretendiente = pretendiente;
 	}
+	
+	
 
 	private static final long serialVersionUID = 1L;
 
