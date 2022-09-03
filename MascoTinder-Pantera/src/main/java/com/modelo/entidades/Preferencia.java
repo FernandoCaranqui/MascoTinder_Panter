@@ -1,21 +1,37 @@
 package com.modelo.entidades;
 
 import java.io.Serializable;
+import java.util.List;
+
 import javax.persistence.*;
 
-@Entity
-@Table(name = "preferencia")
+@Entity(name = "preferencia")
 public class Preferencia implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_Preferencia")
 	private Integer id;
+	
 	@Column(name = "sexo")
 	private String sexo;
+	
 	@Column(name = "especie")
 	private String especie;
+	
 	@Column(name = "ubicacion")
 	private String ubicacion;
+	
+	@ManyToOne
+	@JoinColumn(name = "idDuenio")
+	private Duenio duenioPreferencia;
+	
+	@OneToMany(mappedBy = "preferencias")
+	@JoinColumn(name = "edadMax")
+	private List<Mascota> mascEdadMax;
+	
+	@OneToMany(mappedBy = "preferencias")
+	@JoinColumn(name = "edadMin")
+	private List<Mascota>  mascEdadMin;
 	
 	private static final long serialVersionUID = 1L;
 
@@ -56,6 +72,32 @@ public class Preferencia implements Serializable {
 	}
 	
 	
+	
+	
+	public Duenio getDuenioPreferencia() {
+		return duenioPreferencia;
+	}
+
+	public void setDuenioPreferencia(Duenio duenioPreferencia) {
+		this.duenioPreferencia = duenioPreferencia;
+	}
+
+	public List<Mascota> getMascEdadMax() {
+		return mascEdadMax;
+	}
+
+	public void setMascEdadMax(List<Mascota> mascEdadMax) {
+		this.mascEdadMax = mascEdadMax;
+	}
+
+	public List<Mascota> getMascEdadMin() {
+		return mascEdadMin;
+	}
+
+	public void setMascEdadMin(List<Mascota> mascEdadMin) {
+		this.mascEdadMin = mascEdadMin;
+	}
+
 	@Override
 	public int hashCode() {
 		int hash = 0;

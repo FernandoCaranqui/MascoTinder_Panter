@@ -3,11 +3,14 @@ package com.modelo.entidades;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -16,9 +19,6 @@ import javax.persistence.Table;
 @Table(name = "duenio")
 public class Duenio implements Serializable{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	@Id
@@ -31,7 +31,24 @@ public class Duenio implements Serializable{
 	private String user;
 	@Column(name = "duenio_password")
 	private String password;
+	@OneToMany(mappedBy = "duenio")
+	@JoinColumn
+	private List<Mascota> mascotas;
 	
+	@OneToMany(mappedBy = "receptor")
+	@JoinColumn
+	private List<Mensaje> mensajesRecibidos;
+	
+	@OneToMany(mappedBy = "receptor")
+	@JoinColumn
+	private List<Mensaje> mensajesEnviados;
+	
+	@OneToMany(mappedBy = "duenioPreferencia")
+	@JoinColumn
+	private List<Preferencia> preferencia;
+	
+	
+
 	
 	public Duenio() {
 	}
@@ -66,6 +83,51 @@ public class Duenio implements Serializable{
 
 	public void setPasseword(String passeword) {
 		this.password = passeword;
+	}
+
+	
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public List<Mascota> getMascotas() {
+		return mascotas;
+	}
+
+	public void setMascotas(List<Mascota> mascotas) {
+		this.mascotas = mascotas;
+	}
+	/*
+	public List<Mensaje> getMensajesRecibidos() {
+		return mensajesRecibidos;
+	}
+
+	public void setMensajesRecibidos(List<Mensaje> mensajesRecibidos) {
+		this.mensajesRecibidos = mensajesRecibidos;
+	}
+
+	public List<Mensaje> getMensajesEnviados() {
+		return mensajesEnviados;
+	}
+
+	public void setMensajesEnviados(List<Mensaje> mensajesEnviados) {
+		this.mensajesEnviados = mensajesEnviados;
+	}
+
+	public List<Preferencia> getPreferencia() {
+		return preferencia;
+	}
+
+	public void setPreferencia(List<Preferencia> preferencia) {
+		this.preferencia = preferencia;
+	}*/
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	@Override

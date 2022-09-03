@@ -10,12 +10,19 @@ public class Mensaje implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private Integer id;
-	@Column (name = "idReceptor")
-	private Duenio Receptor;
-	@Column (name = "idEmisor")
+	
+	@ManyToOne
+	@JoinColumn(name = "idReceptor")
+	private Duenio receptor;
+	
+	@ManyToOne
+	@JoinColumn (name = "idEmisor")
 	private Duenio emisor;
-	@Column (name = "contenido")
+	
+	@JoinColumn (name = "contenido")
 	private Duenio contenido;
+	
+
 	
 	
 	private static final long serialVersionUID = 1L;
@@ -33,11 +40,11 @@ public class Mensaje implements Serializable {
 	}
 
 	public Duenio getReceptor() {
-		return Receptor;
+		return receptor;
 	}
 
 	public void setReceptor(Duenio receptor) {
-		Receptor = receptor;
+		receptor = receptor;
 	}
 
 	public Duenio getEmisor() {
@@ -55,6 +62,7 @@ public class Mensaje implements Serializable {
 	public void setContenido(Duenio contenido) {
 		this.contenido = contenido;
 	}
+	
 	
 	@Override
 	public int hashCode() {
