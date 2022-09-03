@@ -24,7 +24,7 @@ public class JPAMascotaDAO extends JPAGenericDAO<Mascota, Integer> implements Ma
 	@Override
 	public List<Mascota> getMascotas() {
 		List<Mascota> lista = new ArrayList<Mascota>();
-		String sentenceJPQL = "SELECT d FROM Mascota d";
+		String sentenceJPQL = "SELECT d from Duenio d ORDER BY d.nombre ASC";
 		//TypedQuery <Mascota> query = this.em.createQuery(sentenceJPQL, Mascota.class);
 		//lista = query.getResultList();
 		Query query = this.em.createQuery(sentenceJPQL);
