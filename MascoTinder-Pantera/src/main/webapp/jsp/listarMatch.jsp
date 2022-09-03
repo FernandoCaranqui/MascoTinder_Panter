@@ -1,21 +1,17 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="ISO-8859-1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Listar Mascotas</title>
+<meta charset="ISO-8859-1">
+<title>Listar Matchs</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link href="estilosListarMascota.css" rel="stylesheet">
+  <link href="estilosListarMatch.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/3e841de0b4.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
-  <header>
+<header>
     <div class="menu">
       <img src="img/logo.jpg" class="logo" alt="logoApp">
       <nav>
@@ -31,15 +27,7 @@
       </nav>
     </div>
   </header>
-  <h1 class="titulo">Mis Mascotas</h1>
-  <div class="botonNuevaMascota">
-    <div class="cajaBoton">
-      <a href="#">Nueva Mascota</a>
-    </div>
-    <div class="cajaBotonEliminar">
-      <a href="#">Eliminar Mascota</a>
-    </div>
-  </div>
+  <h1 class="titulo">Mis Matches</h1>
   <div class="mascotas">
 
     <div class="mascota">
@@ -62,24 +50,16 @@
                 numquam quis laboriosam corporis mollitia.</span></div>
           </div>
         </div>
-        <br><br> <br>
+        <br><br>
         <div class="row">
-          <div class="col-12 d-flex justify-content-around ">
-            <div>
-              <a class="enlace" href="">PREFERENCIAS</a>
-            </div>
-            <div>
-              <spam> MATCH </spam>
-              <i class="fas fa-heart"></i><span> 350 </span>
-            </div>
-            <div>
-              <a class="enlace" href="">BUSCAR</a>
+            <div class="col-12 d-flex justify-content-around ">
+              <div>
+                <a class="enlace" href="">MENSAJE</a>
+              </div>
             </div>
           </div>
-        </div>
       </div>
     </div>
   </div>
 </body>
-
 </html>
