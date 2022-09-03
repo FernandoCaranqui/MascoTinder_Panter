@@ -8,9 +8,9 @@ public class TestJPA {
 
 	public static void main(String[] args) {
 			Duenio r = new Duenio();
-			r.setNombre("Cristopher");
-			r.setPassword("1234567");
-			r.setUser("cris123");
+			r.setNombre("Migue");
+			r.setPassword("m1212");
+			r.setUser("curfram");
 			r.setMascotas(null);
 			
 			DAOFactory.getFactory().getDuenioDAO().create(r);
