@@ -6,5 +6,5 @@ import com.modelo.entidades.Mascota;
 public interface MascotaDAO extends GenericDAO<Mascota, Integer> {
 	
 	//public Mascota autorizar(String usuario, String password);
-	public List<Mascota> getMascotas();
+	//public List<Mascota> getMascotas();
 }

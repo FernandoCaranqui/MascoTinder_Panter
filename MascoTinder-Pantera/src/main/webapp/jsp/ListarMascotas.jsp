@@ -44,6 +44,7 @@
   </div>
   <div class="mascotas">
 
+    <c:forEach items="${usuarios}" var="persona">
     <div class="mascota">
       <div class="imagenMascota d-none d-lg-block col-3">
         <img src="img/perro2.jpg" class="mascotaImagen" alt="">
@@ -51,8 +52,13 @@
       <div class="description col-12 col-lg-8 ">
         <div class="row">
           <div class="col-12">
-            <div class=" m-2"><span class="nombreMascota float-left">Nombres</span>
+            <div class=" m-2"><span class="nombreMascota float-left">${persona.nombre}</span>
             </div>
+            <div class=" m-2"><span class="nombreMascota float-left">${persona.especie}</span><br>
+            <div class=" m-2"><span class="nombreMascota float-left">${persona.raza}</span><br>
+            <div class=" m-2"><span class="nombreMascota float-left">${persona.edad}</span><br>
+            <div class=" m-2"><span class="nombreMascota float-left">${persona.sexo}</span><br>
+            <div class=" m-2"><span class="nombreMascota float-left">${persona.ubicacion}</span><br>
           </div>
         </div>
         <div class="row">
@@ -65,6 +71,7 @@
           </div>
         </div>
         <br><br> <br>
+        
         <div class="row">
           <div class="col-12 d-flex justify-content-around ">
             <div>
@@ -77,10 +84,12 @@
             <div>
               <a class="enlace" href="">BUSCAR</a>
             </div>
+            
           </div>
         </div>
       </div>
     </div>
+    </c:forEach>
   </div>
 </body>
 
