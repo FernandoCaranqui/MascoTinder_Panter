@@ -5,12 +5,7 @@
   }
   
   body {
-    background-image: url(img/fondo.jpg);
-    background-repeat: no-repeat;
-    height: 187vh;
-    background-position: center;
-    font-family: 'calibri';
-    border-radius: 5px;
+    background: #f8f3f3;
   }
   
   header {
@@ -61,10 +56,9 @@
   }
 
   .logo{
-    padding-top: 10px;
-    width: 200px;
+    padding-top: 20px;
     height: 100px;
-    border-radius: 20px;
+    border-radius: 5px;
   }
 
   .login{
@@ -76,7 +70,6 @@
     margin-top: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-   
 }
 .form-register {
     width: 600px;
@@ -91,33 +84,29 @@
     box-shadow: 7px 13px 37px #000;
     margin-top: 10px;
 }
-.form-register p {
-    font-size: 30px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
-    color: black;
-}
-.form-register h1 {
-    color: #000;
-}
-.form-register h2 {
-    font-size: 25px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: left;
-    color: black;
-}
 .controls{
     width: 100%;
+    height: 150px;
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 16px;
-    border: 1px solid #F14857;
+    border: 1px solid #F14857 ;
     font-size: 18px;
 }
+
 .enviar{
     text-align: center;
-    width: 100%;
+    width: 100px;
+    height: 50px;
     padding: 8px;
     border-radius: 5px;
     background: #F14857;
+}
+.remitente{
+    width: 410px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #F14857 ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

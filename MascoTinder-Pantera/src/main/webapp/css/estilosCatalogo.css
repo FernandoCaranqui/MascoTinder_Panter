@@ -10,7 +10,7 @@
   }
   
   header {
-    background: #03A9F4;
+    background: #F14857;
     width: 100%;
     clear: both;
     content:'';
@@ -92,7 +92,7 @@
   text-decoration: none;
   text-align: center;
   font-size: 20px;
-  border-bottom: 4px solid #03A9F4;
+  border-bottom: 4px solid #F14857;
   border-radius: 10px;
 }
 
@@ -107,7 +107,7 @@
   margin-left: 10px;
   text-decoration: none;
   text-align: center;
-  border-bottom: 4px solid #03A9F4;
+  border-bottom: 4px solid #F14857;
   border-radius: 10px;
 }
 
