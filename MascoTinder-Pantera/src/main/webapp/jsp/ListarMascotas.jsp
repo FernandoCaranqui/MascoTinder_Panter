@@ -97,7 +97,7 @@
 									<a class="enlace" href="">PREFERENCIAS</a>
 								</div>
 								<div>
-									<spam> MATCH </spam>
+									<a class="enlace" href="MatchController?idMascota=${mascota.id}">MATCHES</a>
 									<i class="fas fa-heart"></i><span> 350 </span>
 								</div>
 								<div>

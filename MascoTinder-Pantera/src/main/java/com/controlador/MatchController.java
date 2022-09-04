@@ -9,14 +9,13 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.modelo.dao.DAOFactory;
 
-@WebServlet("/MensajeController")
-public class MensajeController extends HttpServlet {
+@WebServlet("/MatchController")
+public class MatchController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    public MensajeController() {
+    public MatchController() {
         super();
     }
-    
+
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		procesarSolicitud(req, resp);
 	}
@@ -28,8 +27,7 @@ public class MensajeController extends HttpServlet {
 	private void procesarSolicitud(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 
-		req.setAttribute("mensajes", DAOFactory.getFactory().getMensajeDAO().getMensajes());
-		getServletContext().getRequestDispatcher("/jsp/mensajes.jsp").forward(req, resp);
+		req.setAttribute("matches", DAOFactory.getFactory().getMatchDAO().getMatches());
+		getServletContext().getRequestDispatcher("/jsp/listarMatch.jsp").forward(req, resp);
 	}
-
 }

@@ -14,4 +14,5 @@ public abstract class DAOFactory {
 	public abstract DuenioDAO getDuenioDAO();
 	public abstract MascotaDAO getMascotaDAO();
 	public abstract MensajeDAO getMensajeDAO();
+	public abstract MatchDAO getMatchDAO();
 	}

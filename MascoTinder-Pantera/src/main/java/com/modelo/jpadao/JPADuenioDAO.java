@@ -33,4 +33,19 @@ public class JPADuenioDAO extends JPAGenericDAO<Duenio, Integer> implements Duen
 		}
 		return duenioAutorizado;
 	}
+
+	@Override
+	public Duenio getDuenioById(int id) {
+		Duenio duenio = null;
+		String sentenceJPQL = "SELECT d from Duenio d WHERE d.id= :param_id";
+		Query query = this.em.createQuery(sentenceJPQL);
+		query.setParameter("param_id", id);
+		try {
+			duenio = (Duenio) query.getSingleResult();
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return duenio;
+	}
 }
