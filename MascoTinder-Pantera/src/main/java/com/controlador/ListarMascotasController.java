@@ -27,7 +27,6 @@ public class ListarMascotasController extends HttpServlet {
 
 		req.setAttribute("mascotas", DAOFactory.getFactory().getMascotaDAO().getMascotas());
 		getServletContext().getRequestDispatcher("/jsp/ListarMascotas.jsp").forward(req, resp);
-
 	}
 
 }
