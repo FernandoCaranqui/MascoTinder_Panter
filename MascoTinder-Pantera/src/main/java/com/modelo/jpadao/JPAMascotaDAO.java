@@ -1,5 +1,6 @@
 package com.modelo.jpadao;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,6 +25,7 @@ public class JPAMascotaDAO extends JPAGenericDAO<Mascota, Integer> implements Ma
 	@Override
 	public List<Mascota> get() {
 		List<Mascota> lista = new ArrayList<Mascota>();
+		int ot =1;
 		String sentenceJPQL = "SELECT d from Mascota d ORDER BY d.nombre ASC";
 		//TypedQuery <Mascota> query = this.em.createQuery(sentenceJPQL, Mascota.class);
 		//lista = query.getResultList();
@@ -36,5 +38,4 @@ public class JPAMascotaDAO extends JPAGenericDAO<Mascota, Integer> implements Ma
 		}
 		return lista;
 	}
-
 }
