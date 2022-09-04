@@ -14,7 +14,7 @@
   }
   
   header {
-    background: #03A9F4;
+    background: #F14857;
     width: 100%;
     clear: both;
     content:'';
@@ -87,7 +87,7 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 40px;
     text-align: left;
-    color: #03A9F4;
+    color: #F14857;
     box-shadow: 7px 13px 37px #000;
     margin-top: 10px;
 }
@@ -111,7 +111,7 @@
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 16px;
-    border: 1px solid #1f53c5;
+    border: 1px solid #F14857;
     font-size: 18px;
 }
 .enviar{
@@ -119,5 +119,5 @@
     width: 100%;
     padding: 8px;
     border-radius: 5px;
-    background: #03A9F4;
+    background: #F14857;
 }
