@@ -13,10 +13,6 @@ import com.modelo.dao.DAOFactory;
 public class ListarMascotasController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public ListarMascotasController() {
-		super();
-	}
-
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		procesarSolicitud(req, resp);
 	}
@@ -29,7 +25,7 @@ public class ListarMascotasController extends HttpServlet {
 	private void procesarSolicitud(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 
-		req.setAttribute("usuarios", DAOFactory.getFactory().getMascotaDAO().get());
+		req.setAttribute("mascotas", DAOFactory.getFactory().getMascotaDAO().getMascotas());
 		getServletContext().getRequestDispatcher("/jsp/ListarMascotas.jsp").forward(req, resp);
 
 	}

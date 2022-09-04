@@ -46,10 +46,12 @@ public class JPAGenericDAO<T,ID> implements GenericDAO<T, ID> {
 		em.getTransaction().begin();
 		try {
 			em.remove(instancia);
+			System.out.println("LLEGA HASTA EL .REMOVE");
 			em.getTransaction().commit();
 		} catch (Exception ex) {
 			if(em.getTransaction().isActive()) {
 				em.getTransaction().rollback();
+				System.out.println("esta en el rollback");
 			}
 		}
 	}

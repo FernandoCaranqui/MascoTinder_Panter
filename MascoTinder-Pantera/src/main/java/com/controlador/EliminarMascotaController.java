@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.modelo.dao.DAOFactory;
 import com.modelo.entidades.Mascota;
 
 @WebServlet("/EliminarMascotaController")
@@ -20,10 +21,25 @@ public class EliminarMascotaController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// 1. Obtener parámetros
-		int di = Integer.parseInt(request.getParameter("idMascota"));
+		int id = Integer.parseInt(request.getParameter("idMascota"));
+		/*String nombre = request.getParameter("nombreMascota");
+		String especie = request.getParameter("especieMascota");
+		String raza = request.getParameter("razaMascota");
+		int edad = Integer.parseInt(request.getParameter("edadMascota"));
+		String sexo = request.getParameter("sexoMascota");
+		String ubi = request.getParameter("ubiMascota");*/
 		// 2.- Llamar al Modelo
-		Mascota mascotaModelo = new Mascota();
-		mascotaModelo.delete(id);
+		
+		Mascota mascotaModelo = DAOFactory.getFactory().getMascotaDAO().getById(id);
+		System.out.println(mascotaModelo);
+		/*mascotaModelo.setNombre(nombre);
+		mascotaModelo.setEspecie(especie);
+		mascotaModelo.setRaza(raza);
+		mascotaModelo.setEdad(edad);
+		mascotaModelo.setSexo(sexo);
+		mascotaModelo.setUbicacion(ubi);*/
+		
+		DAOFactory.getFactory().getMascotaDAO().delete(mascotaModelo);
 
 		// 3.- Llamar a la Vista
 		request.getRequestDispatcher("ListarMascotasController").forward(request, response);

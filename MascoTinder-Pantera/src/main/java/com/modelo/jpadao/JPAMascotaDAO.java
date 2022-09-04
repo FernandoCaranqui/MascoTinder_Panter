@@ -16,17 +16,11 @@ public class JPAMascotaDAO extends JPAGenericDAO<Mascota, Integer> implements Ma
 		super(Mascota.class);
 	}
 
-	@Override
-	public Mascota getById(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Mascota> get() {
+	public List<Mascota> getMascotas() {
 		List<Mascota> lista = new ArrayList<Mascota>();
-		int ot =1;
-		String sentenceJPQL = "SELECT d from Mascota d ORDER BY d.nombre ASC";
+		String sentenceJPQL = "SELECT d from Mascota d";
 		//TypedQuery <Mascota> query = this.em.createQuery(sentenceJPQL, Mascota.class);
 		//lista = query.getResultList();
 		Query query = this.em.createQuery(sentenceJPQL);
