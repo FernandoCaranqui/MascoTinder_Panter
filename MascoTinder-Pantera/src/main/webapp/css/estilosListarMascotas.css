@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    background: #03A9F4;
+    background: #F14857;
     width: 100%;
     clear: both;
     content: '';
@@ -57,10 +57,10 @@ nav ul li a:hover::before {
 }
 
 .logo {
-    padding-top: 10px;
-    width: 200px;
+    padding-top: 5px;
     height: 100px;
-    border-radius: 20px;
+    width: 100px;
+    border-radius: 40px; 
 }
 
 .login {
@@ -79,7 +79,7 @@ nav ul li a:hover::before {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     font-size: x-large;
-    border-bottom: 3px solid #03A9F4;
+    border-bottom: 3px solid #F14857;
 }
 
 .cajaBoton{
@@ -87,7 +87,7 @@ nav ul li a:hover::before {
     margin-left: 20px;
     width: 250px;
     text-align: center;
-    border: 2px solid #03A9F4;
+    border: 2px solid #F14857;
     background-color: #C7FF33;
 }
 
@@ -95,7 +95,7 @@ nav ul li a:hover::before {
     width: 250px;
     margin-right: 20px;
     text-align: center;
-    border: 2px solid #03A9F4;
+    border: 2px solid #F14857;
     background-color: #FF6433;
     color: #fff;
     float: right;
@@ -159,7 +159,7 @@ body {
     display: flex;
     flex-direction: row;
     position: relative;
-    border-bottom: 4px solid #03A9F4;
+    border-bottom: 4px solid #F14857;
     border-radius: 10px;
 }
 

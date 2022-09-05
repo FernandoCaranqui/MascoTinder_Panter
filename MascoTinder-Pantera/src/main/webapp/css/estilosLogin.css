@@ -4,18 +4,18 @@
 }
 
 .link{
-    color: #0080FF ;
+    color: #F14857 ;
     text-align: left;
     text-decoration: underline;
 }
 
 .texto{
     text-align: right;
-    color: #0080FF ;
+    color: #F14857 ;
 }
 
 .texto1{
-    color: #0080FF ;
+    color: #F14857 ;
     display: inline;
 }
 .alineacionBoton{
@@ -60,6 +60,12 @@ h1{
     padding: 16px;
 }
 .color{
-    background-color: #0080FF ;
+    background-color: #F14857 ;
     height: 50px;
+}
+.logo {
+    padding-top: 5px;
+    height: 100px;
+    width: 100px;
+    border-radius: 40px; 
 }

@@ -15,7 +15,7 @@
 <body>
 	<div class="container ">
 		<div class="tipoDeLetra ">
-			<h1>LOGO APP</h1>
+			<h1><img src="img/MascotinderLogo.png" class="logo" alt="logo de la app"></h1>
 			<br>
 			<br>
 			<br>
