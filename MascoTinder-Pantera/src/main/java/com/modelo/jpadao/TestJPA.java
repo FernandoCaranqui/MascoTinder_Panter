@@ -11,7 +11,6 @@ import com.modelo.entidades.Mensaje;
 public class TestJPA {
 
 	public static void main(String[] args) {
-<<<<<<< HEAD
 		Duenio d = new Duenio();
 		d.setId(2);
 		/*d.setNombre("Fernando");
@@ -36,7 +35,6 @@ public class TestJPA {
 
 		
 			
-=======
 		/*
 		Duenio r1 = new Duenio();
 		r1.setNombre("Migue");
@@ -87,7 +85,6 @@ public class TestJPA {
 		me.setContenido(cont);
 		DAOFactory.getFactory().getMensajeDAO().create(me);
 		
->>>>>>> origin/dao-cris-migue
 	}
 	
 	

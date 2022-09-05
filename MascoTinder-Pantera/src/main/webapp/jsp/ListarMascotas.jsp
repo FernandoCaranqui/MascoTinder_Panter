@@ -43,18 +43,13 @@
 	<h1 class="titulo">Mis Mascotas</h1>
 	<div class="botonNuevaMascota">
 		<div class="cajaBoton">
-			<a href="NuevaMascotaController?user=${usuario}">Nueva Mascota</a>
+			<a href="NuevaMascotaController?user=${usuario}">Agregar Nueva Mascota</a>
 		</div>
 	</div>
 	<br>
-	<br>
-	<br>
 	<div class="mascotas">
 		<c:forEach items="${mascotas}" var="mascota">
-			<div class="cajaBotonEliminar">
-				<a href="EliminarMascotaController?idMascota=${mascota.id}">Eliminar
-					Mascota</a>
-			</div>
+			
 			<div class="mascota">
 				<div class="imagenMascota d-none d-lg-block col-3">
 					<img src="img/perro2.jpg" class="mascotaImagen" alt="">
@@ -63,17 +58,17 @@
 					<div class="row">
 						<div class="col-12">
 							<div class=" m-2">
-								<span class="nombreMascota float-left">${mascota.nombre}</span> <br> <br>
-								<span class="nombreMascota float-left">${mascota.especie}</span><br>
-								<span class="nombreMascota float-left">${mascota.raza}</span><br>
-								<span class="nombreMascota float-left">${mascota.edad}</span><br>
-								<span class="nombreMascota float-left">${mascota.sexo}</span><br>
-								<span class="nombreMascota float-left">${mascota.ubicacion}</span><br>
+								<div class="Informacion">Nombre: <span class="nombreMascota ">${mascota.nombre}</span></div>
+								<div class="Informacion">Especie: <span class="nombreMascota ">${mascota.especie}</span></div>
+								<div class="Informacion">Raza: <span class="nombreMascota ">${mascota.raza}</span></div>
+								<div class="Informacion">Edad: <span class="nombreMascota ">${mascota.edad}</span> Años</div>
+								<div class="Informacion">Sexo: <span class="nombreMascota ">${mascota.sexo}</span></div>
+								<div class="Informacion">Ubicación: <span class="nombreMascota ">${mascota.ubicacion}</span></div>
 							</div>
 						</div>
 					</div>
 			
-					<br> <br> <br>
+					<br>
 					<div class="row">
 						<div class="col-12 d-flex justify-content-around ">
 							<div>
@@ -81,12 +76,13 @@
 							</div>
 							<div>
 								<a class="enlace" href="MatchController?idMascota=${mascota.id}&nombreMascota=${mascota.nombre}">MATCHES</a>
-								<i class="fas fa-heart"></i><span> 350 </span>
+								<i class="fas fa-heart"></i><span class = "numMatch"> 350 </span>
 							</div>
 							<div>
-								<a class="enlace" href="">BUSCAR</a>
+								<a class="enlace" href="BuscarMascotasControler">BUSCAR</a>
 							</div>
 						</div>
+						<div class="cajaBotonEliminar"><a href="EliminarMascotaController?idMascota=${mascota.id}">Eliminar Mascota</a></div>
 					</div>
 				</div>
 			</div>

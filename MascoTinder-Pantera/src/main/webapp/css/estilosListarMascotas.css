@@ -7,6 +7,7 @@
 body {
     background: #292929;
     font-family: 'calibri';
+    background-color: red;
 }
 
 header {
@@ -70,35 +71,33 @@ nav ul li a:hover::before {
 
 .titulo{
     text-align: center;
-    margin-top: 20px;
+    margin-top: 0px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2)
+    box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2)
 }
 
 .botonNuevaMascota{
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     font-size: x-large;
-    border-bottom: 3px solid #F14857;
 }
 
 .cajaBoton{
     float: left;
     margin-left: 20px;
-    width: 250px;
+    width: 150px;
     text-align: center;
-    border: 2px solid #F14857;
-    background-color: #C7FF33;
 }
 
 .cajaBotonEliminar{
-    width: 250px;
+    width: 150px;
     margin-right: 20px;
+    margin-left: 300px;
     text-align: center;
-    border: 2px solid #F14857;
-    background-color: #FF6433;
+    background-color: red;
     color: #fff;
     float: right;
+    border-radius: 10px;
 }
 
 .cajaBotonEliminar a{
@@ -120,11 +119,12 @@ body {
 .enlace {
     text-decoration: none;
     color: rgb(0, 0, 0);
+    font-size: 25px;
 }
 
 .enlace:hover {
     text-decoration: none;
-    color: #33FFF0;
+    color: #F14857;
 }
 
 .header {
@@ -136,7 +136,9 @@ body {
 }
 
 .nombreMascota {
-    font-size: 65px;
+    font-size: 25px;
+    color: black;
+    
 }
 
 .mascotas {
@@ -191,4 +193,19 @@ body {
     margin: 10px;
 }
 
-
+.Informacion{
+	font-size: 25px;
+	color: #F17777;
+}
+.fa-heart{
+	padding: 0px;
+	margin-left: 10px;
+	margin-top: 0px;
+	font-size: 25px;
+}
+.numMatch{
+	padding: 0px;
+	margin-left: 5px;
+	margin-top: 0px;
+	font-size: 25px;
+}

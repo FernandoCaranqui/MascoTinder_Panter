@@ -36,8 +36,6 @@ public class Match implements Serializable {
 		this.id = id;
 	}
 	
-<<<<<<< HEAD
-	
 
 	public Mascota getRecibeMatch() {
 		return recibeMatch;
@@ -48,14 +46,6 @@ public class Match implements Serializable {
 	}
 
 
-
-	private static final long serialVersionUID = 1L;
-
-	public Match() {
-	}
-	
-=======
->>>>>>> origin/dao-cris-migue
 	@Override
 	public int hashCode() {
 		int hash = 0;
