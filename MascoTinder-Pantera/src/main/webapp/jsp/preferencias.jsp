@@ -14,7 +14,7 @@
 <body>
 <header>
         <div class="menu">
-            <img src="img/MascotinderLogo.png" class="logo" alt="logoApp">
+            <img src="img/logo.jpg" class="logo" alt="logoApp">
             <nav>
                 <ul>
                     <li><samp></samp></li>

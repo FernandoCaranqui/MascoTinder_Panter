@@ -56,12 +56,12 @@
     width: 100%;
   }
 
-  .logo {
-    padding-top: 5px;
+  .logo{
+    padding-top: 10px;
+    width: 200px;
     height: 100px;
-    width: 100px;
-    border-radius: 40px; 
-}
+    border-radius: 20px;
+  }
 
   .login{
     padding-bottom: 40px;

@@ -1,34 +1,36 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Login</title>
 <!--CSS de Bootstrap-->
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
 	crossorigin="anonymous">
-<link href="estilosLogin.css" rel="stylesheet">
+<!-- CSS only -->
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/estilosLogin.css">
 </head>
 <body>
-	<div class="container ">
-		<div class="tipoDeLetra ">
-			<h1><img src="img/MascotinderLogo.png" class="logo" alt="logo de la app"></h1>
+	<div class="container">
+		<div class="tipoDeLetra">
+			<h1><img src="img/logo.jpg" class="logo" alt="logo de la app"></h1>
 			<br>
 			<br>
 			<br>
 			<form method="post" action="LoginController">
-				<input type="hidden" name="txtId" id="txtId" value="${persona.id}" />
+				<!--input type="text" name="txtId" id="txtId" value="${persona.id}" /-->
 				<br>
 				<div class="container">
 					<div class="row">
 						<div class="col-2 color">
-							<label for="txtId" class="etiquetas">CORREO</label>
+							<label for="txtNombre" class="etiquetas">CORREO</label>
 						</div>
-						<div class="col-10 ">
-							<input type="text" name="txtNombre" id="txtNombre"
+						<div class="col-10">
+							<input type="text" name="usuario" id="txtNombre"
 								class="entradas" value="${persona.nombre}" />
 						</div>
 					</div>
@@ -36,15 +38,16 @@
 					<br>
 					<div class="row">
 						<div class="col-2 color">
-							<label for="txtId" class="etiquetas">CLAVE</label>
+							<label for="txtClave" class="etiquetas">CLAVE</label>
 						</div>
 						<div class="col-10">
-							<input type="password" name="txtClave" id="txtClave"
+							<input type="password" name="password" id="txtClave"
 								class="entradas" value="${persona.password}" />
 						</div>
 					</div>
 				</div>
 				<br> <br>
+				
 				<div class="row alineacionBoton">
 					<div>
 						<input type="submit" class="entradas etiquetas color boton"
@@ -54,12 +57,11 @@
 				<br> <br>
 				<div class="row">
 					<div class="col-6 texto">
-						<p>No tienes cuenta?</p>
+						<p>¿No tienes cuenta?</p>
 						<br>
 					</div>
 					<div class="col-6">
-						<p class="texto1">Registrate</p>
-						<a href="#" class="link"> aqu�<br>
+						<a href="#" class="link">Registrate aquí<br>
 					</div>
 				</div>
 			</form>
