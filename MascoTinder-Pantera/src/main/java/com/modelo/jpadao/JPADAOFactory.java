@@ -5,6 +5,7 @@ import com.modelo.dao.DuenioDAO;
 import com.modelo.dao.MascotaDAO;
 import com.modelo.dao.MatchDAO;
 import com.modelo.dao.MensajeDAO;
+import com.modelo.dao.PreferenciaDAO;
 
 public class JPADAOFactory extends DAOFactory{
 
@@ -22,6 +23,10 @@ public class JPADAOFactory extends DAOFactory{
 
 	public MatchDAO getMatchDAO() {
 		return new JPAMatchDAO();
+	}
+
+	public PreferenciaDAO getPreferenciaDAO() {
+		return new JPAPreferenciaDAO();
 	}
 
 
