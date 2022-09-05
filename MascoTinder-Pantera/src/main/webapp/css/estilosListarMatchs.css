@@ -74,7 +74,7 @@ nav ul li a:hover::before {
     font-family: letracabecera;
     font-style: normal;
     font-weight: normal;
-    src: url(../listarMatch/font/HelveticaNeueCyr-Bold.woff2);
+    src: url(../font/HelveticaNeueCyr-Bold.woff2);
 }
 .titulo2{
     font-family: letracabecera;
