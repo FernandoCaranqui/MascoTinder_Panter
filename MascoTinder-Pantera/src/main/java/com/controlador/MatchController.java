@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.modelo.dao.DAOFactory;
+import com.modelo.entidades.Duenio;
 
 @WebServlet("/MatchController")
 public class MatchController extends HttpServlet {
@@ -26,8 +27,8 @@ public class MatchController extends HttpServlet {
 	
 	private void procesarSolicitud(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-
-		req.setAttribute("matches", DAOFactory.getFactory().getMatchDAO().getMatches());
+		int id = Integer.parseInt(req.getParameter("idMascota"));
+		req.setAttribute("matches", DAOFactory.getFactory().getMatchDAO().getMatches(id));
 		getServletContext().getRequestDispatcher("/jsp/listarMatch.jsp").forward(req, resp);
 	}
 }

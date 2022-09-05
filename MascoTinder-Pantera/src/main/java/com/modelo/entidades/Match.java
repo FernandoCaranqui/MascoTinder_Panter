@@ -8,8 +8,14 @@ import javax.persistence.*;
  *
  */
 @Entity
-@Table(name = "match")
+@Table(name = "matches")
 public class Match implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	public Match() {
+		super();
+	}
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
@@ -46,14 +52,6 @@ public class Match implements Serializable {
 
 	public void setPretendiente(Mascota pretendiente) {
 		this.pretendiente = pretendiente;
-	}
-	
-	
-
-	private static final long serialVersionUID = 1L;
-
-	public Match() {
-		super();
 	}
 	
 	@Override

@@ -19,7 +19,7 @@
 <body>
 	<header>
 		<div class="menu">
-			<img src="img/logo.jpg" class="logo" alt="logoApp">
+			<img src="img/MascotinderLogo.png" class="logo" alt="logoApp">
 			<nav>
 				<ul>
 					<li><samp></samp></li>
@@ -35,29 +35,31 @@
 			</nav>
 		</div>
 	</header>
-	<h1 class="titulo">Mis Matches</h1>
+	<c:forEach items="${matches}" var="match">
+		<h1 class="titulo">Matchs para </h1> <span>${match.pretendido.getNombre()}</span>
+	</c:forEach>
+	
+	
 	<div class="mascotas">
-		<c:forEach items="${matches}" var="match">
-			<div class="mascota">
-				<div class="imagenMascota d-none d-lg-block col-3">
-					<img src="img/perro2.jpg" class="mascotaImagen" alt="">
-				</div>
-				<div class="description col-12 col-lg-8 ">
+
+		<div class="mascota">
+			<div class="imagenMascota d-none d-lg-block col-3">
+				<img src="img/perro2.jpg" class="mascotaImagen" alt="">
+			</div>
+			<div class="description">
+				<c:forEach items="${matches}" var="match">
 					<div class="row">
-						<div class="col-12">
+						<div class="col-6">
 							<div class=" m-2">
-								<span class="nombreMascota float-left">${match.pretendiente}</span>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-12">
-							<div>
-								<span class="description">Lorem ipsum dolor sit amet
-									consectetur adipisicing elit. Facilis necessitatibus, eos
-									soluta quasi praesentium cumque quaerat at veritatis quibusdam,
-									tempora officiis laudantium quisquam sit beatae numquam quis
-									laboriosam corporis mollitia.</span>
+								<span class="nombreMascota float-left">${match.pretendiente.getNombre()}</span>
+								<br>
+								<div>
+									<span class="description">Lorem ipsum dolor sit amet
+										consectetur adipisicing elit. Facilis necessitatibus, eos
+										soluta quasi praesentium cumque quaerat at veritatis
+										quibusdam, tempora officiis laudantium quisquam sit beatae
+										numquam quis laboriosam corporis mollitia.</span>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -70,9 +72,10 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</c:forEach>
 			</div>
-		</c:forEach>
+		</div>
+
 	</div>
 </body>
 </html>

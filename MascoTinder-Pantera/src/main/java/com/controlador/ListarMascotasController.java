@@ -27,7 +27,6 @@ public class ListarMascotasController extends HttpServlet {
 	private void procesarSolicitud(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		Duenio d = (Duenio) req.getSession().getAttribute("usuario");
-		//Duenio d = DAOFactory.getFactory().getDuenioDAO().getDuenioById(1);
 		req.setAttribute("mascotas", DAOFactory.getFactory().getMascotaDAO().getMascotas(d));
 		getServletContext().getRequestDispatcher("/jsp/ListarMascotas.jsp").forward(req, resp);
 	}
