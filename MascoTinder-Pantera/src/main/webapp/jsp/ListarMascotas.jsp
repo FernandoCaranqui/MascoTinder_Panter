@@ -84,7 +84,7 @@
 								<i class="fas fa-heart"></i><span> 350 </span>
 							</div>
 							<div>
-								<a class="enlace" href="">BUSCAR</a>
+								<a class="enlace" href="BuscarMascotasController">BUSCAR</a>
 							</div>
 						</div>
 					</div>

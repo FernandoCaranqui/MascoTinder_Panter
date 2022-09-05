@@ -31,8 +31,8 @@
         </div>
     </header>
     <div>
-        <section class="form-register">
-            <form>
+        <section >
+            <form action="CatalogoController" class="form-register">
                 <h1 class="titulo">Preferencias</h1>
                 <p>Buscar mascotas que cumplen con: </p>
                 Tipo
