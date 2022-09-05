@@ -18,10 +18,8 @@
 <body>
 	<%@include file="../templates/banner_interno.html" %>
 	<h1 class="titulo">Mis Mascotas</h1>
-	<div class="botonNuevaMascota">
-		<div class="cajaBoton">
-			<a href="NuevaMascotaController?user=${usuario}">Agregar Nueva Mascota</a>
-		</div>
+	<div  class="btnAgregar">
+		<a href="NuevaMascotaController?user=${usuario}">Agregar Nueva Mascota</a>
 	</div>
 	<br>
 	<div class="mascotas">
