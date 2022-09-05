@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>Listar Mascotas</title>
@@ -11,8 +11,9 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
 	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
 	crossorigin="anonymous">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/estilosListarMascotas.css">
+<link
+	href="${pageContext.request.contextPath}/css/estilosListarMascotas.css"
+	rel="stylesheet">
 <script src="https://kit.fontawesome.com/3e841de0b4.js"
 	crossorigin="anonymous"></script>
 </head>
@@ -20,7 +21,7 @@
 <body>
 	<header>
 		<div class="menu">
-			<img src="img/logo.jpg" class="logo" alt="logoApp">
+			<img src="img/MascotinderLogo.png" class="logo" alt="logoApp">
 			<nav>
 				<ul>
 					<li><samp></samp></li>
@@ -45,7 +46,9 @@
 			<a href="NuevaMascotaController?user=${usuario}">Nueva Mascota</a>
 		</div>
 	</div>
-	<br> <br> <br>
+	<br>
+	<br>
+	<br>
 	<div class="mascotas">
 		<c:forEach items="${mascotas}" var="mascota">
 			<div class="cajaBotonEliminar">
@@ -61,48 +64,37 @@
 						<div class="col-12">
 							<div class=" m-2">
 								<span class="nombreMascota float-left">${mascota.nombre}</span>
-							</div>
-							<div class=" m-2">
 								<span class="nombreMascota float-left">${mascota.especie}</span><br>
-							</div>
-							<div class=" m-2">
 								<span class="nombreMascota float-left">${mascota.raza}</span><br>
-							</div>
-							<div class=" m-2">
 								<span class="nombreMascota float-left">${mascota.edad}</span><br>
-							</div>
-							<div class=" m-2">
 								<span class="nombreMascota float-left">${mascota.sexo}</span><br>
-							</div>
-							<div class=" m-2">
 								<span class="nombreMascota float-left">${mascota.ubicacion}</span><br>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-12">
-								<div>
-									<span class="description">Lorem ipsum dolor sit amet
-										consectetur adipisicing elit. Facilis necessitatibus, eos
-										soluta quasi praesentium cumque quaerat at veritatis
-										quibusdam, tempora officiis laudantium quisquam sit beatae
-										numquam quis laboriosam corporis mollitia.</span>
-								</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<div>
+								<span class="description">Lorem ipsum dolor sit amet
+									consectetur adipisicing elit. Facilis necessitatibus, eos
+									soluta quasi praesentium cumque quaerat at veritatis quibusdam,
+									tempora officiis laudantium quisquam sit beatae numquam quis
+									laboriosam corporis mollitia.</span>
 							</div>
 						</div>
-						<br> <br> <br>
-
-						<div class="row">
-							<div class="col-12 d-flex justify-content-around">
-								<div>
-									<a class="enlace" href="">PREFERENCIAS</a>
-								</div>
-								<div>
-									<a class="enlace" href="MatchController?idMascota=${mascota.id}&nombreMascota=${mascota.nombre}">MATCHES</a>
-									<i class="fas fa-heart"></i><span> 350 </span>
-								</div>
-								<div>
-									<a class="enlace" href="">BUSCAR</a>
-								</div>
+					</div>
+					<br> <br> <br>
+					<div class="row">
+						<div class="col-12 d-flex justify-content-around ">
+							<div>
+								<a class="enlace" href="">PREFERENCIAS</a>
+							</div>
+							<div>
+								<a class="enlace" href="MatchController?idMascota=${mascota.id}&nombreMascota=${mascota.nombre}">MATCHES</a>
+								<i class="fas fa-heart"></i><span> 350 </span>
+							</div>
+							<div>
+								<a class="enlace" href="">BUSCAR</a>
 							</div>
 						</div>
 					</div>
