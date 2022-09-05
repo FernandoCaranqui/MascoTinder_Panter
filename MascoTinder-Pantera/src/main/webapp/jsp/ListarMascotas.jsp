@@ -19,7 +19,7 @@
 	<%@include file="../templates/banner_interno.html" %>
 	<h1 class="titulo">Mis Mascotas</h1>
 	<div  class="btnAgregar">
-		<a href="NuevaMascotaController?user=${usuario}">Agregar Nueva Mascota</a>
+		<a href="NuevaMascotaController?user=${usuario.getId()}">Agregar Nueva Mascota</a>
 	</div>
 	<br>
 	<div class="mascotas">
@@ -47,7 +47,7 @@
 					<div class="row">
 						<div class="col-12 d-flex justify-content-around ">
 							<div>
-								<a class="enlace" href="">PREFERENCIAS</a>
+								<a class="enlace" href="PreferenciasController">PREFERENCIAS</a>
 							</div>
 							<div>
 								<a class="enlace" href="MatchController?idMascota=${mascota.id}&nombreMascota=${mascota.nombre}">MATCHES</a>

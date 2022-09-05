@@ -15,18 +15,25 @@ import com.modelo.entidades.Mascota;
 @WebServlet("/NuevaMascotaController")
 public class NuevaMascotaController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
+	public int idmascota=0;
     public NuevaMascotaController() {
         super();
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//request
+		int idMas = Integer.parseInt(request.getParameter("user"));
+		idmascota=idMas;
+		System.out.println(idMas);
+		System.out.println("--------------------------------------------------");
 		request.getRequestDispatcher("jsp/agregarMascota.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//1.-Obtener parametros  ${sessionScope.usuario.getID() type="hidden"
-		int id = Integer.parseInt(request.getParameter("txtId"));
+		//int id = Integer.parseInt(request.getParameter("txtId"));
+		System.out.println("********************************");
+		System.out.println(idmascota);
 		int edad = Integer.parseInt(request.getParameter("txtedad"));
 		String especie = request.getParameter("txtespecie");
 		String nombre = request.getParameter("txtnombre");
@@ -38,7 +45,8 @@ public class NuevaMascotaController extends HttpServlet {
 		
 		Mascota p = new Mascota();
 		Duenio d= new Duenio();
-		d.setId(id);
+		d.setId(idmascota);
+		//d.setId(id);
 		p.setEdad(edad);
 		p.setEspecie(especie);
 		p.setNombre(nombre);
@@ -48,6 +56,8 @@ public class NuevaMascotaController extends HttpServlet {
 		p.setDuenio(d);
 		//mascotaModelo.create(p);
 		DAOFactory.getFactory().getMascotaDAO().create(p);
+		//int idUsuario = Integer.parseInt(request.getParameter("user"));
+		//System.out.println(idUsuario);
 		//3.- llamar a la vista
 		request.getRequestDispatcher("ListarMascotasController").forward(request, response);
 	}

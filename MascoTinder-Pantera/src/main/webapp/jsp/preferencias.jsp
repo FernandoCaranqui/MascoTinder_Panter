@@ -17,13 +17,13 @@
 <body>
 <%@include file="../templates/banner_interno.html" %>
     <div>
-        <section class="form-register">
-            <form>
+        <section >
+            <form method="post" action="BuscarMascotasController" class="form-register">
                 <h1 class="titulo">Preferencias</h1>
                 <p>Buscar mascotas que cumplen con: </p>
                 Tipo
                 <br>
-                <select class="controls" name="select">
+                <select class="controls" name="especie">
                     <option value="especies" selected>Opciones</option>
                     <option value="especies1">Perros</option>
                     <option value="especies2">Gatos</option>
@@ -34,7 +34,7 @@
                 <br>
                 Sexo
                 <br>
-                <select class="controls" name="select">
+                <select class="controls" name="sexo">
                     <option value="Sexos" selected>Opciones</option>
                     <option value="Sexo1">Hembra</option>
                     <option value="Sexo2">Macho</option>
@@ -42,7 +42,7 @@
                 <br>
                 Ubicación
                 <br>
-                <select class="controls" name="select">
+                <select class="controls" name="ubicacion">
                     <option value="Ubicaciones" selected>Opciones</option>
                     <option value="Ubicacion1">Quito</option>
                     <option value="Ubicacion2">Guayaquil</option>
@@ -54,7 +54,7 @@
                 <h2>Rangos de Edad</h2>
                 Mayores a
                 <br>
-                <select class="controls" name="select">
+                <select class="controls" name="edad-min">
                     <option value="Edades" selected>Opciones</option>
                     <option value="Edad1">1 año</option>
                     <option value="Edad2">2 años</option>
@@ -63,7 +63,7 @@
                 <br>
                 Menores a
                 <br>
-                <select class="controls" name="select">
+                <select class="controls" name="edad-max">
                     <option value="EdadesM" selected>Opciones</option>
                     <option value="EdadesM1">5 años</option>
                     <option value="EdadesM2">3 años</option>
