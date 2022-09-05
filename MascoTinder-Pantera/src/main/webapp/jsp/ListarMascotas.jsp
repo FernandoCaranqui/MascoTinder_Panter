@@ -42,7 +42,7 @@
 	<h1 class="titulo">Mis Mascotas</h1>
 	<div class="botonNuevaMascota">
 		<div class="cajaBoton">
-			<a href="#">Nueva Mascota</a>
+			<a href="AgregrMascotaController">Nueva Mascota</a>
 		</div>
 	</div>
 	<br> <br> <br>
