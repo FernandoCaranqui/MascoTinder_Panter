@@ -21,13 +21,11 @@ public class Match implements Serializable {
 	@Column(name = "id")
 	private Integer id;
 	
-	@OneToOne
-	@JoinColumn(name = "idMascotaPretendido")
-	private Mascota pretendido;
-	
 	@ManyToOne
-	@JoinColumn(name = "idMascotaPretendiente")
-	private Mascota pretendiente;
+	@JoinColumn
+	private Mascota recibeMatch;
+	
+
 	
 	
 	public Integer getId() {
@@ -37,23 +35,17 @@ public class Match implements Serializable {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-
-	public Mascota getPretendido() {
-		return pretendido;
-	}
-
-	public void setPretendido(Mascota pretendido) {
-		this.pretendido = pretendido;
-	}
-
-	public Mascota getPretendiente() {
-		return pretendiente;
-	}
-
-	public void setPretendiente(Mascota pretendiente) {
-		this.pretendiente = pretendiente;
-	}
 	
+
+	public Mascota getRecibeMatch() {
+		return recibeMatch;
+	}
+
+	public void setRecibeMatch(Mascota recibeMatch) {
+		this.recibeMatch = recibeMatch;
+	}
+
+
 	@Override
 	public int hashCode() {
 		int hash = 0;

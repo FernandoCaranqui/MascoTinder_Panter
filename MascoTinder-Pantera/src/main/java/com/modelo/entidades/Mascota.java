@@ -25,22 +25,18 @@ public class Mascota  implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name= "id")
 	private Integer id;
-	
 	@Column(name="mascot_nombre")
 	private String nombre;
-	
+
 	@Column(name="mascot_especie")
 	private String especie;
-	
 	@Column(name="mascot_raza")
 	private String raza;
-	
 	@Column (name="mascot_edad")
 	private int edad;
-	
 	@Column (name="sexo")
-	private String sexo;
 	
+	private String sexo;
 	@Column(name="ubicacion")
 	private String ubicacion;
 	
@@ -49,121 +45,147 @@ public class Mascota  implements Serializable{
 	private Duenio duenio;
 	
 	
+	@OneToMany(mappedBy = "fotosMasc")
+	@JoinColumn
+	private List<Foto> fotos;
+	
+	/*@ManyToOne
+	@JoinColumn
+	private Mascota edadMax;
+	
 	@ManyToOne
 	@JoinColumn
-	private Preferencia preferencias;
+	private Mascota edadMin;
+	*/
 	
-	@OneToMany(mappedBy = "fotosMasc")
-	@JoinColumn(name = "id_Mascota")
-	private List<Foto> fotosMasc;
 	
-	@OneToMany
-	@JoinColumn(name = "pretendiente")
-	private List<Match> matches;
-	
-	@OneToOne
+	@OneToMany(mappedBy = "recibeMatch")
 	@JoinColumn
-	private Match match;
+	private List<Match> Listapretendido;
+	
+
+	
+
+	public Mascota() {
+
+	}
 	
 	
 	
+
 	public Integer getId() {
 		return id;
 	}
+
+
+
 
 	public void setId(Integer id) {
 		this.id = id;
 	}
 
+
+
+
 	public String getNombre() {
 		return nombre;
 	}
+
+
+
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 
+
+
+
 	public String getEspecie() {
 		return especie;
 	}
+
+
+
 
 	public void setEspecie(String especie) {
 		this.especie = especie;
 	}
 
+
+
+
 	public String getRaza() {
 		return raza;
 	}
+
+
+
 
 	public void setRaza(String raza) {
 		this.raza = raza;
 	}
 
+
+
+
 	public int getEdad() {
 		return edad;
 	}
+
+
+
 
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
 
+
+
+
 	public String getSexo() {
 		return sexo;
 	}
+
+
+
 
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
 
+
+
+
 	public String getUbicacion() {
 		return ubicacion;
 	}
+
+
+
 
 	public void setUbicacion(String ubicacion) {
 		this.ubicacion = ubicacion;
 	}
 
+
+
+
 	public Duenio getDuenio() {
 		return duenio;
 	}
 
+
+
+
 	public void setDuenio(Duenio duenio) {
-		duenio = duenio;
+		this.duenio = duenio;
 	}
+
 	
-	
 
-	public Preferencia getPreferencias() {
-		return preferencias;
-	}
 
-	public void setPreferencias(Preferencia preferencias) {
-		this.preferencias = preferencias;
-	}
 
-	public List<Foto> getFotosMasc() {
-		return fotosMasc;
-	}
-
-	public void setFotosMasc(List<Foto> fotosMasc) {
-		this.fotosMasc = fotosMasc;
-	}
-
-	public List<Match> getMatches() {
-		return matches;
-	}
-
-	public void setMatches(List<Match> matches) {
-		this.matches = matches;
-	}
-
-	public Match getMatch() {
-		return match;
-	}
-
-	public void setMatch(Match match) {
-		this.match = match;
-	}
 
 	@Override
 	public String toString() {

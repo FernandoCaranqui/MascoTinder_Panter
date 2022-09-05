@@ -25,18 +25,20 @@ public class Preferencia implements Serializable {
 	@JoinColumn(name = "idDuenio")
 	private Duenio duenioPreferencia;
 	
-	@OneToMany(mappedBy = "preferencias")
+	/*
 	@JoinColumn(name = "edadMax")
 	private List<Mascota> mascEdadMax;
 	
-	@OneToMany(mappedBy = "preferencias")
 	@JoinColumn(name = "edadMin")
-	private List<Mascota>  mascEdadMin;
+	private List<Mascota> mascEdadMin;
+	*/
+	private int edadMax;
+	private int edadMin;
+	
 	
 	private static final long serialVersionUID = 1L;
 
 	public Preferencia() {
-		super();
 	}
 
 	public Integer getId() {
@@ -82,7 +84,7 @@ public class Preferencia implements Serializable {
 		this.duenioPreferencia = duenioPreferencia;
 	}
 
-	public List<Mascota> getMascEdadMax() {
+/*	public List<Mascota> getMascEdadMax() {
 		return mascEdadMax;
 	}
 
@@ -97,7 +99,7 @@ public class Preferencia implements Serializable {
 	public void setMascEdadMin(List<Mascota> mascEdadMin) {
 		this.mascEdadMin = mascEdadMin;
 	}
-
+*/
 	@Override
 	public int hashCode() {
 		int hash = 0;

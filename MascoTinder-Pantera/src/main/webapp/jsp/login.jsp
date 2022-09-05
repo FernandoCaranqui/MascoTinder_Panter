@@ -6,16 +6,13 @@
 <meta charset="ISO-8859-1">
 <title>Login</title>
 <!--CSS de Bootstrap-->
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-	crossorigin="anonymous">
+
 <link href="${pageContext.request.contextPath}/css/estilosLogin.css" rel="stylesheet">
 </head>
 <body>
 	<div class="container ">
 		<div class="tipoDeLetra ">
-			<h1><img src="img/MascotinderLogo.png" class="logo" alt="logo de la app"></h1>
+			<h1><img src="img/MascotinderLogo.png" class="logoLogin" alt="logo de la app"></h1>
 			<br>
 			<br>
 			<br>

@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #f8f3f3;
+    font-family: 'calibri';
+  }
+  
+header {
+    background: #F14857;
+    width: 100%;
+    clear: both;
+    content: '';
+    display: table;
+    height: 50px;
+}
+
+.menu {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+
+nav {
+    float: right;
+}
+
+nav ul li {
+    list-style: none;
+    margin-left: 75px;
+    padding: 40px 0;
+    float: left;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+}
+
+nav ul li a::before {
+    display: block;
+    content: '';
+    width: 0%;
+    background: #444;
+    height: 5px;
+    top: 0;
+    position: absolute;
+    transition: width 0.2s;
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+}
+
+.logo {
+    padding-top: 5px;
+    height: 90px;
+    width: 75px;
+    border-radius: 10px; 
+}
+
+.login {
+    padding-bottom: 40px;
+    width: 20px;
+}
+
+.titulo{
+    text-align: center;
+    margin-top: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2)
+}
+@font-face {
+    font-family: letracabecera;
+    font-style: normal;
+    font-weight: normal;
+    src: url(../font/HelveticaNeueCyr-Bold.woff2);
+}
+
+
+
+.salir{
+	text-decoration: none;
+	color: black;
+}

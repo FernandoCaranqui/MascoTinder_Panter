@@ -31,6 +31,7 @@ public class Duenio implements Serializable{
 	private String user;
 	@Column(name = "duenio_password")
 	private String password;
+	
 	@OneToMany(mappedBy = "duenio")
 	@JoinColumn
 	private List<Mascota> mascotas;
@@ -94,13 +95,7 @@ public class Duenio implements Serializable{
 		this.password = password;
 	}
 
-	public List<Mascota> getMascotas() {
-		return mascotas;
-	}
-
-	public void setMascotas(List<Mascota> mascotas) {
-		this.mascotas = mascotas;
-	}
+	
 	/*
 	public List<Mensaje> getMensajesRecibidos() {
 		return mensajesRecibidos;

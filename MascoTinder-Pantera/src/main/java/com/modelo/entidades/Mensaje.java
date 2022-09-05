@@ -28,7 +28,6 @@ public class Mensaje implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	public Mensaje() {
-		super();
 	}
 
 	public Integer getId() {
