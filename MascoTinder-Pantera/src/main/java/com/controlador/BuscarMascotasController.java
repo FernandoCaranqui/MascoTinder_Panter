@@ -27,11 +27,11 @@ public class BuscarMascotasController extends HttpServlet {
 	private void procesarSolicitud(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		
-		int edad = Integer.parseInt(req.getParameter("txtedad"));
-		String especie = req.getParameter("txtespecie");
-		String raza = req.getParameter("txtraza");
-		String sexo = req.getParameter("txtsexo");
-		String ubicacion = req.getParameter("txtubicacion");
+		int edad = 4; //Integer.parseInt(req.getParameter("txtedad"));
+		String especie = "Hamster";//req.getParameter("txtespecie");
+		String raza = "Dorado";//req.getParameter("txtraza");
+		String sexo = "Macho";//req.getParameter("txtsexo");
+		String ubicacion = "Quito";//req.getParameter("txtubicacion");
 		
 		Mascota p = new Mascota();
 		p.setEdad(edad);
