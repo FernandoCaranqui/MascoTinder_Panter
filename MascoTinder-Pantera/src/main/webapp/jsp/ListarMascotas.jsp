@@ -63,7 +63,7 @@
 					<div class="row">
 						<div class="col-12">
 							<div class=" m-2">
-								<span class="nombreMascota float-left">${mascota.nombre}</span>
+								<span class="nombreMascota float-left">${mascota.nombre}</span> <br> <br>
 								<span class="nombreMascota float-left">${mascota.especie}</span><br>
 								<span class="nombreMascota float-left">${mascota.raza}</span><br>
 								<span class="nombreMascota float-left">${mascota.edad}</span><br>
@@ -72,17 +72,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-12">
-							<div>
-								<span class="description">Lorem ipsum dolor sit amet
-									consectetur adipisicing elit. Facilis necessitatibus, eos
-									soluta quasi praesentium cumque quaerat at veritatis quibusdam,
-									tempora officiis laudantium quisquam sit beatae numquam quis
-									laboriosam corporis mollitia.</span>
-							</div>
-						</div>
-					</div>
+			
 					<br> <br> <br>
 					<div class="row">
 						<div class="col-12 d-flex justify-content-around ">
