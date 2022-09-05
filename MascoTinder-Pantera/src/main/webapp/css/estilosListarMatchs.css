@@ -2,117 +2,120 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     background: #f8f3f3;
     font-family: 'calibri';
-  }
-  
-  header {
+}
+
+header {
     background: #F14857;
     width: 100%;
     clear: both;
-    content:'';
+    content: '';
     display: table;
-  }
-  
-  .menu {
+}
+
+.menu {
     width: 1400px;
     margin: 0 auto;
-  }
+}
 
-  
-  nav {
+
+nav {
     float: right;
-  }
-  
-  nav ul li {
+}
+
+nav ul li {
     list-style: none;
     margin-left: 75px;
     padding: 40px 0;
     float: left;
     position: relative;
-  }
-  
-  nav ul li a {
+}
+
+nav ul li a {
     text-decoration: none;
     color: #444;
     font-weight: bold;
-  }
-  
-  nav ul li a::before {
+}
+
+nav ul li a::before {
     display: block;
     content: '';
     width: 0%;
     background: #444;
     height: 5px;
-    top:0;
+    top: 0;
     position: absolute;
     transition: width 0.2s;
-  }
-  
-  nav ul li a:hover::before {
+}
+
+nav ul li a:hover::before {
     width: 100%;
-  }
+}
 
-  .logo{
-    padding-top: 10px;
-    width: 200px;
+.logo {
+    padding-top: 5px;
     height: 100px;
-    border-radius: 20px;
-  }
+    width: 100px;
+    border-radius: 40px; 
+}
 
-  .login{
+.titulo {
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+
+}
+@font-face {
+    font-family: letracabecera;
+    font-style: normal;
+    font-weight: normal;
+    src: url(../listarMatch/font/HelveticaNeueCyr-Bold.woff2);
+}
+.titulo2{
+    font-family: letracabecera;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    color: #F14857;
+}
+.mensajes{
+    font-family: letra2;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color: #F14857;
+    margin-right: 15px;
+}
+.contents{
+    text-align: left;
+    font-family: letra2;
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+.mascota{
+    text-align: right;
+    font-family: letra2;
+    margin-top: 15px;
+}
+
+.login {
     padding-bottom: 40px;
     width: 20px;
-  }
-
-  .carousel-item{
-    padding: auto;
-    margin-top: 20px;
-    padding-left: 200px;
-    padding-right: 200px;
-    width: 100%;
-    height: 400px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-
-
-.meGusta{
-  display: inline;
-  margin-top: 20px;
-  margin-left: 650px;
-  padding-top: 20px;
-  padding-right: 20px;
-  padding-left: 20px;
-  text-decoration: none;
-  text-align: center;
-  font-size: 20px;
-  border-bottom: 4px solid #F14857;
-  border-radius: 10px;
 }
 
-.espaciado{
-  margin-top: 20px;
+.line{
+    margin-left: 5%;
+    margin-right: 5%;
 }
-.noMegusta{
-  display: inline;
-  font-size: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-left: 10px;
-  text-decoration: none;
-  text-align: center;
-  border-bottom: 4px solid #F14857;
-  border-radius: 10px;
+.descripcion{
+    padding: 20px;
+    font-size: 15px;
+    text-align: left;
+    
 }
-
-.ancho{
-  margin-left: 200px;
-  margin-right: 200px;
-}
-
