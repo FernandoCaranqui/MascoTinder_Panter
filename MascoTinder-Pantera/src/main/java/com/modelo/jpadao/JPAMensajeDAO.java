@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.Query;
 
 import com.modelo.dao.MensajeDAO;
+import com.modelo.entidades.Duenio;
 import com.modelo.entidades.Mensaje;
 
 public class JPAMensajeDAO extends JPAGenericDAO<Mensaje, Integer> implements MensajeDAO{
@@ -16,18 +17,20 @@ public class JPAMensajeDAO extends JPAGenericDAO<Mensaje, Integer> implements Me
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Mensaje> getMensajes(int id) {
-		List<Mensaje> lista = new ArrayList<Mensaje>();
-		String sentenceJPQL = "SELECT m from Mensaje m WHERE m.id= :param_id";
+	public Mensaje getMensajes(Duenio emisor, Duenio receptor) {
+		/*List<Mensaje> lista = new ArrayList<Mensaje>();*/
+		Mensaje mensaje = new Mensaje();
+		String sentenceJPQL = "SELECT m from Mensaje m WHERE m.emisor= :emisor_id AND m.receptor= :receptor_id";
 		Query query = this.em.createQuery(sentenceJPQL);
-		query.setParameter("param_id", id);
+		query.setParameter("emisor_id", emisor);
+		query.setParameter("receptor_id", receptor);
 		try {
-			lista = query.getResultList();
-			
+			//lista = query.getResultList();
+			mensaje = (Mensaje) query.getSingleResult();
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
-		return lista;
+		return mensaje;
 	}
 
 }

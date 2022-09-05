@@ -28,8 +28,13 @@ public class MensajeController extends HttpServlet {
 	
 	private void procesarSolicitud(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
+		//emisor
 		Duenio d = (Duenio) req.getSession().getAttribute("usuario");
-		req.setAttribute("mensajes", DAOFactory.getFactory().getMensajeDAO().getMensajes(d.getId()));
+		//receptor
+		int idD2 = Integer.parseInt(req.getParameter("idDuenioReceptor"));
+		Duenio d2 = DAOFactory.getFactory().getDuenioDAO().getDuenioById(idD2);
+		
+		req.setAttribute("mensajes", DAOFactory.getFactory().getMensajeDAO().getMensajes(d,d2));
 		getServletContext().getRequestDispatcher("/jsp/mensajes.jsp").forward(req, resp);
 	}
 

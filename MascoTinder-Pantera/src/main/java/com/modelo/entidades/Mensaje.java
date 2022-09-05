@@ -20,7 +20,7 @@ public class Mensaje implements Serializable {
 	private Duenio emisor;
 	
 	@JoinColumn (name = "contenido")
-	private Duenio contenido;
+	private String contenido;
 	
 
 	
@@ -44,7 +44,7 @@ public class Mensaje implements Serializable {
 	}
 
 	public void setReceptor(Duenio receptor) {
-		receptor = receptor;
+		this.receptor = receptor;
 	}
 
 	public Duenio getEmisor() {
@@ -55,11 +55,11 @@ public class Mensaje implements Serializable {
 		this.emisor = emisor;
 	}
 
-	public Duenio getContenido() {
+	public String getContenido() {
 		return contenido;
 	}
 
-	public void setContenido(Duenio contenido) {
+	public void setContenido(String contenido) {
 		this.contenido = contenido;
 	}
 	

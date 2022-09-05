@@ -16,7 +16,7 @@
 				<ul>
 					<li><samp></samp></li>
 					<li><a href="#"></a></li>
-					<li><a href="MatchController?idMascota=${mascota.id}&nombreMascota=${mascota.nombre}"><img
+					<li><a href="ListarMascotasController"><img
 							src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAR5JREFUSEvt1uENwiAUBODrJOomOok6iTqJOoluoqOYa2iDpdB70IbESGL0B+0HPDhsUKk1lVyUwGsA/DxzBp8LnwCcHcjvixXPgbcAHgPIjFvhMZRjeAM4WpbdAsfQbvImXIW5iV5CHYnv3Aokuysw0SsAzlhpEq7A3Egq6i/7JjXKKTgHlfAUXIJ2+M3t9mDyMZg1PSgFFfqMnvEx2E8l4b1SlwAfwlNnVVIinb5wH14SDdLNh1lT1nbJxljlhguuReIrJ/M3w6OkMUxayLX+Flv6OPGuZoTKx4kd5zjHvwGzZvfB2u0jgTPrjMeSKBY6f7ivUM5xqrbUffp4GyyWeuZrke9kajG/uyQL0seDLX3bx6b+gZTEZfLZavAHgjZFH6oHJd4AAAAASUVORK5CYII=" /></a>
 					</li>
 					<li><samp class="login">
@@ -32,7 +32,7 @@
 		<form>
 			<h1 class="titulo">Mensajes</h1>
 			<br>
-			<textarea class="controls" name="Review" rows="3" cols="30"></textarea>
+			<textarea class="controls" name="Review" rows="3" cols="30">${mensajes.contenido}</textarea>
 			<br>
 			<br> <input class="remitente" type="text" name="mensaje1">
 			<input class="enviar" type="submit" value="Enviar">

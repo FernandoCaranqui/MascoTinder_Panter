@@ -66,7 +66,7 @@
 					<div class="row">
 						<div class="col-12 d-flex justify-content-around ">
 							<div>
-								<a class="enlace" href="MensajeController?idMensaje=${match.id}">MENSAJE</a>
+								<a class="enlace" href="MensajeController?idDuenioReceptor=${match.pretendiente.getDuenio().getId()}">MENSAJE</a>
 							</div>
 						</div>
 					</div>
