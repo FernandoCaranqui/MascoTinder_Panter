@@ -24,7 +24,7 @@ public class NuevaMascotaController extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//1.-Obtener parametros  ${sessionScope.usuario.getID()
+		//1.-Obtener parametros  ${sessionScope.usuario.getID() type="hidden"
 		int id = Integer.parseInt(request.getParameter("txtId"));
 		int edad = Integer.parseInt(request.getParameter("txtedad"));
 		String especie = request.getParameter("txtespecie");
