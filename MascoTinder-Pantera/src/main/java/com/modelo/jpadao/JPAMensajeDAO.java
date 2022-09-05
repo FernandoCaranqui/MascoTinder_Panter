@@ -16,12 +16,11 @@ public class JPAMensajeDAO extends JPAGenericDAO<Mensaje, Integer> implements Me
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Mensaje> getMensajes() {
+	public List<Mensaje> getMensajes(int id) {
 		List<Mensaje> lista = new ArrayList<Mensaje>();
-		String sentenceJPQL = "SELECT men from mensaje men";
-		//TypedQuery <Mascota> query = this.em.createQuery(sentenceJPQL, Mascota.class);
-		//lista = query.getResultList();
+		String sentenceJPQL = "SELECT m from Mensaje m WHERE m.id= :param_id";
 		Query query = this.em.createQuery(sentenceJPQL);
+		query.setParameter("param_id", id);
 		try {
 			lista = query.getResultList();
 			

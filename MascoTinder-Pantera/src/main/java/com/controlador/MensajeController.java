@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.modelo.dao.DAOFactory;
+import com.modelo.entidades.Duenio;
 
 @WebServlet("/MensajeController")
 public class MensajeController extends HttpServlet {
@@ -27,8 +28,8 @@ public class MensajeController extends HttpServlet {
 	
 	private void procesarSolicitud(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-
-		req.setAttribute("mensajes", DAOFactory.getFactory().getMensajeDAO().getMensajes());
+		Duenio d = (Duenio) req.getSession().getAttribute("usuario");
+		req.setAttribute("mensajes", DAOFactory.getFactory().getMensajeDAO().getMensajes(d.getId()));
 		getServletContext().getRequestDispatcher("/jsp/mensajes.jsp").forward(req, resp);
 	}
 
