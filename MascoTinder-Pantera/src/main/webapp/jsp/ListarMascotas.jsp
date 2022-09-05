@@ -27,7 +27,7 @@
 			
 			<div class="mascota">
 				<div class="imagenMascota d-none d-lg-block col-3">
-					<img src="img/perro2.jpg" class="mascotaImagen" alt="">
+					<img src="img/Lunes.jpg" class="mascotaImagen" alt="">
 				</div>
 				<div class="description col-12 col-lg-8 ">
 					<div class="row">
