@@ -8,8 +8,14 @@ import javax.persistence.*;
  *
  */
 @Entity
-@Table(name = "match")
+@Table(name = "matches")
 public class Match implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	public Match() {
+		super();
+	}
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
@@ -30,6 +36,7 @@ public class Match implements Serializable {
 		this.id = id;
 	}
 	
+<<<<<<< HEAD
 	
 
 	public Mascota getRecibeMatch() {
@@ -47,6 +54,8 @@ public class Match implements Serializable {
 	public Match() {
 	}
 	
+=======
+>>>>>>> origin/dao-cris-migue
 	@Override
 	public int hashCode() {
 		int hash = 0;

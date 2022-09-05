@@ -27,6 +27,10 @@ public class Mascota  implements Serializable{
 	private Integer id;
 	@Column(name="mascot_nombre")
 	private String nombre;
+<<<<<<< HEAD
+=======
+	
+>>>>>>> origin/dao-cris-migue
 	@Column(name="mascot_especie")
 	private String especie;
 	@Column(name="mascot_raza")

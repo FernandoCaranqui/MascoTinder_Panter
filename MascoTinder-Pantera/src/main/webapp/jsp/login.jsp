@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +10,7 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
 	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
 	crossorigin="anonymous">
-<link href="estilosLogin.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/css/estilosLogin.css" rel="stylesheet">
 </head>
 <body>
 	<div class="container ">
@@ -28,7 +28,7 @@
 							<label for="txtId" class="etiquetas">CORREO</label>
 						</div>
 						<div class="col-10 ">
-							<input type="text" name="txtNombre" id="txtNombre"
+							<input type="text" name="usuario" id="txtNombre"
 								class="entradas" value="${persona.nombre}" />
 						</div>
 					</div>
@@ -36,10 +36,10 @@
 					<br>
 					<div class="row">
 						<div class="col-2 color">
-							<label for="txtId" class="etiquetas">CLAVE</label>
+							<label for="txtClave" class="etiquetas">CLAVE</label>
 						</div>
 						<div class="col-10">
-							<input type="password" name="txtClave" id="txtClave"
+							<input type="password" name="password" id="txtClave"
 								class="entradas" value="${persona.password}" />
 						</div>
 					</div>
@@ -58,8 +58,7 @@
 						<br>
 					</div>
 					<div class="col-6">
-						<p class="texto1">Registrate</p>
-						<a href="#" class="link"> aquí<br>
+						<a href="#" class="link">Registrate aquÃ­</a><br>
 					</div>
 				</div>
 			</form>
