@@ -8,10 +8,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.modelo.dao.DAOFactory;
+import com.modelo.entidades.Duenio;
 import com.modelo.entidades.Mascota;
 
 
-@WebServlet("/AgregrMascotaController")
+@WebServlet("/NuevaMascotaController")
 public class NuevaMascotaController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
@@ -36,12 +37,15 @@ public class NuevaMascotaController extends HttpServlet {
 		Mascota mascotaModelo = new Mascota();
 		
 		Mascota p = new Mascota();
+		Duenio d= new Duenio();
+		d.setId(id);
 		p.setEdad(edad);
 		p.setEspecie(especie);
 		p.setNombre(nombre);
 		p.setRaza(raza);
 		p.setSexo(sexo);
 		p.setUbicacion(ubicacion);
+		p.setDuenio(d);
 		//mascotaModelo.create(p);
 		DAOFactory.getFactory().getMascotaDAO().create(p);
 		//3.- llamar a la vista
