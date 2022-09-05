@@ -43,7 +43,7 @@
 	<h1 class="titulo">Mis Mascotas</h1>
 	<div class="botonNuevaMascota">
 		<div class="cajaBoton">
-			<a href="NuevaMascotaController?user=${usuario}">Nueva Mascota</a>
+			<a href="NuevaMascotaController?user=${usuario.getId()}">Nueva Mascota</a>
 		</div>
 	</div>
 	<br>

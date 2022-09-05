@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.modelo.dao.DAOFactory;
 import com.modelo.entidades.Mascota;
 
 
@@ -44,7 +45,8 @@ public class BuscarMascotasController extends HttpServlet {
 		
 		//3.- llamar a la vista
 		//request.getRequestDispatcher("CatalogoController").forward(request, response);
-		req.setAttribute("usuarios", p );
+		//req.setAttribute("usuarios", p );
+		req.setAttribute("mascotas", DAOFactory.getFactory().getMascotaDAO().get());
 		getServletContext().getRequestDispatcher("/jsp/catalogo.jsp").forward(req, resp);
 
 	}
