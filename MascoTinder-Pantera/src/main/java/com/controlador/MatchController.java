@@ -29,6 +29,7 @@ public class MatchController extends HttpServlet {
 			throws ServletException, IOException {
 		int id = Integer.parseInt(req.getParameter("idMascota"));
 		req.setAttribute("matches", DAOFactory.getFactory().getMatchDAO().getMatches(id));
+		//req.setAttribute("mascota", DAOFactory.getFactory().getMascotaDAO().getById(id));
 		getServletContext().getRequestDispatcher("/jsp/listarMatch.jsp").forward(req, resp);
 	}
 }
