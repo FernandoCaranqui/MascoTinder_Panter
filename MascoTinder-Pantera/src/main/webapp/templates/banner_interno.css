@@ -15,7 +15,7 @@ header {
     clear: both;
     content: '';
     display: table;
-    height: 50px;
+    height: 100px;
 }
 
 .menu {
@@ -68,13 +68,14 @@ nav ul li a:hover::before {
     padding-bottom: 40px;
     width: 20px;
 }
-
 .titulo{
     text-align: center;
     margin-top: 0px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2)
+    box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
+
 @font-face {
     font-family: letracabecera;
     font-style: normal;
