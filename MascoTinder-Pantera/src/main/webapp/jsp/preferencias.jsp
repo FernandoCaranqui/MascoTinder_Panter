@@ -32,7 +32,7 @@
     </header>
     <div>
         <section >
-            <form action="BuscarMascotasController" class="form-register">
+            <form method="post" action="BuscarMascotasController" class="form-register">
                 <h1 class="titulo">Preferencias</h1>
                 <p>Buscar mascotas que cumplen con: </p>
                 Tipo
