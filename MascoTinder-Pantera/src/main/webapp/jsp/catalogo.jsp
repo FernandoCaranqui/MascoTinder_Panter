@@ -7,9 +7,9 @@
 <meta charset="UTF-8">
 <title>Catálogo</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-<link href="../css/estilosCatalogo.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/templates/banner_interno.css" rel="stylesheet">
 <link
-	href="${pageContext.request.contextPath}/css/estilosListarMascotas.css"
+	href="${pageContext.request.contextPath}/css/estilosCatalogo.css"
 	rel="stylesheet">
 <body>
 <%@include file="../templates/banner_interno.html" %>
@@ -22,23 +22,24 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="d-block w-100" src="img/carrucel1.jpg" alt="First slide">
+            <img class="d-block w-100" src="${pageContext.request.contextPath}/img/Manchas.jpg" alt="Third slide">
             <div class="carousel-caption d-none d-md-block">
-              <h5>Nombre de la mascota</h5>
+              <h5>MAX</h5>
               <p>Descripcion</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="img/carrucel2.jpg" alt="Second slide">
+            <img class="d-block w-100" src="${pageContext.request.contextPath}/img/Lunes.jpg" alt="Third slide">
             <div class="carousel-caption d-none d-md-block">
-              <h5>Nombre de la mascota</h5>
+              <h5>Isac</h5>
               <p>Descripcion</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="img/carrucel3.jpg" alt="Third slide">
+            <img class="d-block w-100" src="${pageContext.request.contextPath}/img/Teodoro.jpg" alt="Third slide">
+            
             <div class="carousel-caption d-none d-md-block">
-              <h5>Nombre de la mascota</h5>
+              <h5>Lion</h5>
               <p>Descripcion</p>
             </div>
           </div>
