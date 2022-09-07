@@ -19,7 +19,7 @@ public class TestJPA {
 		DAOFactory.getFactory().getDuenioDAO().create(d);
 		*/
 		Mascota r = new Mascota();
-		r.setNombre("Cooper");
+		r.setNombre("Aspi");
 		r.setEdad(1);
 		r.setSexo("Masculino");
 		r.setUbicacion("San Juan");

@@ -1,27 +1,20 @@
-.botonNuevaMascota{
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: x-large;
-    margin-left: 20px;
-    width: 150px;
-    text-align: center;
-}
+
 .btnAgregar{
 	border-radius: 15px;
-	border: 1px solid black;
-	width: 200px;
+	width: 100px;
 	text-align: center;
 	margin-left: 50px;
 	background-color: #F98181;
+	padding: 0;
 }
 
 .btnAgregar a{
 	text-decoration: none;
 	color: white;
+	padding: 0;
 }
 
 .btnAgregar:hover{
-
 	background-color: white;
 }
 .btnAgregar a:hover{
@@ -33,13 +26,13 @@
 
 
 .cajaBotonEliminar{
-    width: 150px;
-    margin-right: 20px;
-    margin-left: 300px;
+    width: 100px;
+    margin-left: 260px;
+    margin-right: 40px;
     text-align: center;
     background-color: yellow;
     color: #fff;
-    float: right;
+    float: left;
     border-radius: 10px;
     padding: 0px;
 }
@@ -56,9 +49,39 @@
  background-color: red;
 }
 
+
+
+.cajaBotonActualizar{
+    width: 100px;
+    text-align: center;
+    margin-right: 100px;
+    background-color: #F98181;
+    color: #fff;
+    float: left;
+    border-radius: 10px;
+    padding: 0px;
+}
+
+.cajaBotonActualizar a{
+ color: white;
+}
+.cajaBotonActualizar a:hover{
+ text-decoration: none;
+ color: black;
+}
+
+.cajaBotonActualizar:hover{
+ background-color: #f8ff97;
+}
+
+
+
+
 .mascotaImagen {
     width: 235px;
     height: 300px;
+    padding: 5px;
+    margin: 0px;
 }
 
 body {
@@ -79,13 +102,6 @@ body {
     color: #F14857;
 }
 
-.header {
-    position: relative;
-    padding: 0px;
-    background: #fafafa;
-    border-bottom: 1px solid #ccc;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2)
-}
 
 .nombreMascota {
     font-size: 25px;
@@ -113,28 +129,17 @@ body {
     display: flex;
     flex-direction: row;
     position: relative;
-    border-bottom: 4px solid #F14857;
+    box-shadow: 0px 30px 20px 0px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
+    background:#FFF7F7;
 }
 
-.imagenMascota::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    min-height: 40%;
-    background: linear-gradient(0deg, rgba(51, 4, 181, 0.95) 0%, rgba(9, 27, 83, 0) 100%);
-    z-index: 0;
 
-}
 
 .imagenMascota {
     border-radius: 10px;
     padding: 20px, 5px;
     margin: 10px;
-    border: 3px solid #3b3030;
-    background-color: #424242;
 }
 
 .description {
@@ -167,4 +172,11 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
     width: 100%;
+    text-align: center;
+    background-color: white;
+}
+
+.informacion p{
+	color: black;
+	float: left;
 }

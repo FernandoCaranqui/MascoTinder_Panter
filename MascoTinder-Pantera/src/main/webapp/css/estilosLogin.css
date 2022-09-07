@@ -1,71 +1,50 @@
-*{
-    margin: 0px;
-    padding: 0px; 
+body{
+    background-color: bisque;
+    background-image: url("../img/background.jpg");
 }
 
-.link{
-    color: #F14857 ;
-    text-align: left;
-    text-decoration: underline;
-}
+.wrapper{
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 100%;
+	padding: 20px; 
+	width: 100%;
+    height: 90%;
 
-.texto{
-    text-align: right;
-    color: #F14857 ;
-}
-
-.texto1{
-    color: #F14857 ;
-    display: inline;
-}
-.alineacionBoton{
-    margin-left: 470px;
-    width: 200px;
-}
-
-.boton{
-    width: 100px;
-    border-radius: 5px;
     
-    border: none;
-    text-align: center;
 }
 
-.tamanioCajas{
-    height: 30px;
+.formContent{
+	border-radius: 10px;
+	padding: 30px;
+	box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+	text-align: center;
+    width: 450px;
+    background-color: white;
 }
 
-.entradas{
-    height: 50px;
-    width: 100%;
+label{
+	margin: 0;
+	padding: 10px 10px 10px 10px;
 }
 
-.etiquetas{
-    margin: 13px;
-    margin-right: 100px;
-    color: aliceblue;
+input {
+	border-radius: 5px;
+}
+.lougout{
+	text-decoration: none;
+	color: white;
 }
 
-h1{
-    text-align: center;
-    margin-top: 120px;
+a{
+	text-decoration: none;
+	color: black;
 }
 
-.tipoDeLetra{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
+.logo{
+    margin: 0%;
+    padding: 0%;
 
-.alineacionTexto{
-    text-align: center;
-    padding: 16px;
-}
-.color{
-    background-color: #F14857 ;
-    height: 50px;
-}
-.logo {
-    padding-top: 5px;
-    height: 100px;
-    width: 100px;
-    border-radius: 40px; 
 }

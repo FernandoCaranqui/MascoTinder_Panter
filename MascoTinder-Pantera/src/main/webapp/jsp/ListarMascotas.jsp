@@ -1,7 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,16 +15,20 @@
 
 <body>
 	<%@include file="../templates/banner_interno.html" %>
-	<divi class="titulo"><h1 >Mis Mascotas</h1></div>
+	
+	
+	<div class="titulo">
+		<h1 >Mis Mascotas</h1>
+	</div>
+	
 	<div  class="btnAgregar">
-		<a href="NuevaMascotaController?user=${usuario.getId()}">Agregar Nueva Mascota</a>
+		<a href="NuevaMascotaController?user=${usuario.getId()}">Nuevo</a>
 	</div>
 	<br>
 	<div class="mascotas">
 		<c:forEach items="${mascotas}" var="mascota">
-			
 			<div class="mascota">
-				<div class="imagenMascota d-none d-lg-block col-3">
+				<div class="imagenMascota">
 					<img src="img/Lunes.jpg" class="mascotaImagen" alt="">
 				</div>
 				<div class="description col-12 col-lg-8 ">
@@ -36,7 +38,7 @@
 								<div class="Informacion">Nombre: <span class="nombreMascota ">${mascota.nombre}</span></div>
 								<div class="Informacion">Especie: <span class="nombreMascota ">${mascota.especie}</span></div>
 								<div class="Informacion">Raza: <span class="nombreMascota ">${mascota.raza}</span></div>
-								<div class="Informacion">Edad: <span class="nombreMascota ">${mascota.edad}</span> Años</div>
+								<div class="Informacion">Edad: <span class="nombreMascota ">${mascota.edad} Años</span></div>
 								<div class="Informacion">Sexo: <span class="nombreMascota ">${mascota.sexo}</span></div>
 								<div class="Informacion">Ubicación: <span class="nombreMascota ">${mascota.ubicacion}</span></div>
 							</div>
@@ -57,7 +59,8 @@
 								<a class="enlace" href="BuscarMascotasController">BUSCAR</a>
 							</div>
 						</div>
-						<div class="cajaBotonEliminar"><a href="EliminarMascotaController?idMascota=${mascota.id}">Eliminar Mascota</a></div>
+						<div class="cajaBotonEliminar"><a href="EliminarMascotaController?idMascota=${mascota.id}">Eliminar</a></div>
+						<div class="cajaBotonActualizar"><a href="EliminarMascotaController?idMascota=${mascota.id}">Actualizar</a></div>
 					</div>
 				</div>
 			</div>

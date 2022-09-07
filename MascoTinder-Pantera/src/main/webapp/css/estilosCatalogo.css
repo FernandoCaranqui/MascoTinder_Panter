@@ -45,10 +45,50 @@
   margin-left: 200px;
   margin-right: 200px;
 }
+
 .titulo{
-    text-align: center;
     margin-top: 0px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
-    padding-left: 35%;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+}
+
+
+.bi-heart-fill {
+	color: #F14857;
+	margin-left: 45%;
+	width: 30px;
+	height: 30px;
+}
+
+.bi-x-lg{
+	margin-left: 170px;
+	color: red;
+	width: 30px;
+	height: 30px;
+}
+
+.contenedor{
+	background-color: white;
+	box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
+	height: 50px;
+	width: 500px;
+	margin-left: 30%;	
+}
+.carousel-caption{
+	background-color: white;
+}
+
+p{
+	color: black;
+}
+
+h5{
+	color: black;
+}
+
+carousel-item {
+	color: black;
 }
