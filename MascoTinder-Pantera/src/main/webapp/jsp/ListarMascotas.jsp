@@ -17,7 +17,7 @@
 
 <body>
 	<%@include file="../templates/banner_interno.html" %>
-	<h1 class="titulo">Mis Mascotas</h1>
+	<divi class="titulo"><h1 >Mis Mascotas</h1></div>
 	<div  class="btnAgregar">
 		<a href="NuevaMascotaController?user=${usuario.getId()}">Agregar Nueva Mascota</a>
 	</div>

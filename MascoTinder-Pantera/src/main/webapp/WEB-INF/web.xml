@@ -20,6 +20,6 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Jersey REST Service</servlet-name>
-		<url-pattern>/pepa/*</url-pattern>
+		<url-pattern>/pepa/</url-pattern>
 	</servlet-mapping>
 </web-app>

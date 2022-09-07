@@ -13,6 +13,7 @@
 	rel="stylesheet">
 <body>
 <%@include file="../templates/banner_interno.html" %>
+	<h1 class="titulo">MATCH</h1>
     <div class="ancho">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
